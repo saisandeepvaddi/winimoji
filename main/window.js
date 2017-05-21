@@ -6,8 +6,10 @@ exports.window;
 
 exports.createWindow = () => {
   this.window = new BrowserWindow({
-    width: 800,
-    height: 600
+    width: 400,
+    height: 300,
+    frame: false,
+    show: false
   });
 
   this.window.loadURL(
@@ -18,9 +20,10 @@ exports.createWindow = () => {
     })
   );
 
-  this.window.openDevTools();
+  // this.window.openDevTools();
 
   this.window.on("closed", function() {
     this.window = null;
   });
+  return this.window;
 };
