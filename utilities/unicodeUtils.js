@@ -1,3 +1,5 @@
+const fs = require("fs");
+
 const fromUnicodeToEmoji = unicode => {
   let hex;
   if (unicode.startsWith("U+")) {
@@ -6,4 +8,9 @@ const fromUnicodeToEmoji = unicode => {
   return String.fromCodePoint(hex);
 };
 
-module.exports = { fromUnicodeToEmoji };
+const unicodesFromFile = filePath => {
+  let unicodes = fs.readFileSync(filePath, "utf8");
+  return JSON.parse(unicodes);
+};
+
+module.exports = { fromUnicodeToEmoji, unicodesFromFile };

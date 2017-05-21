@@ -1,11 +1,12 @@
 import React, { Component } from "react";
-const utils = require("../../utilities/unicodeUtils");
-import CloseButton from './CloseButton';
+import CloseButton from "./CloseButton";
+import EmojiPad from "./EmojiPad";
+
 class App extends Component {
   render() {
     return (
       <div>
-        Hello {utils.fromUnicodeToEmoji("U+1F600")}
+        <EmojiPad />
         <CloseButton />
       </div>
     );

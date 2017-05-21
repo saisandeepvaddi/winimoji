@@ -23,6 +23,10 @@ module.exports = {
       }
     ]
   },
+  node: {
+    __dirname: true,
+    __filename: true
+  },
   target: "electron-renderer",
   plugins: [
     new HtmlWebpackPlugin({
