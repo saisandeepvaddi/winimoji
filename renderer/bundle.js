@@ -9497,6 +9497,7 @@ var Emoji = function (_Component) {
     key: "render",
     value: function render() {
       var unicode = this.props.unicode;
+      var name = this.props.name;
       return _react2.default.createElement(
         "div",
         null,
@@ -9505,7 +9506,8 @@ var Emoji = function (_Component) {
           value: fromUnicodeToEmoji(unicode),
           onClick: this.getEmoji.bind(this)
         }),
-        unicode
+        unicode,
+        name
       );
     }
   }]);
@@ -9553,25 +9555,66 @@ var _ = __webpack_require__(102);
 var EmojiPad = function (_Component) {
   _inherits(EmojiPad, _Component);
 
-  function EmojiPad() {
+  function EmojiPad(props) {
     _classCallCheck(this, EmojiPad);
 
-    return _possibleConstructorReturn(this, (EmojiPad.__proto__ || Object.getPrototypeOf(EmojiPad)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (EmojiPad.__proto__ || Object.getPrototypeOf(EmojiPad)).call(this, props));
+
+    _this.state = {
+      unicodes: [],
+      emojis: []
+    };
+    return _this;
   }
 
   _createClass(EmojiPad, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var filePath = path.resolve(__dirname, "..", "..", "data", "emoji_unicode_objects.json");
+      var unicodes = unicodesFromFile(filePath);
+      unicodes = _.uniqBy(unicodes, "code");
+      this.setState(function (prevState, props) {
+        return {
+          unicodes: unicodes,
+          emojis: unicodes
+        };
+      });
+    }
+  }, {
+    key: "searchEmoji",
+    value: function searchEmoji() {
+      var _this2 = this;
+
+      var filtered = this.state.unicodes.filter(function (unicode) {
+        return unicode.name.includes(_this2.emoji_name.value);
+      });
+
+      this.setState(function (prevState, props) {
+        return {
+          emojis: filtered
+        };
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
-      var filePath = path.resolve(__dirname, "..", "..", "data", "emoji_unicodes.json");
-      var unicodes = unicodesFromFile(filePath);
-      unicodes = _.uniq(unicodes);
-      var emojis = unicodes.map(function (unicode) {
-        return _react2.default.createElement(_Emoji2.default, { unicode: unicode, key: unicode });
+      var _this3 = this;
+
+      var filtered_emojis = this.state.emojis.map(function (unicode) {
+        return _react2.default.createElement(_Emoji2.default, { unicode: unicode.code, name: unicode.name, key: unicode.code });
       });
       return _react2.default.createElement(
         "div",
         null,
-        emojis
+        _react2.default.createElement("input", {
+          type: "text",
+          ref: function ref(input) {
+            return _this3.emoji_name = input;
+          },
+          placeholder: "Search Emoji",
+          onChange: this.searchEmoji.bind(this)
+        }),
+        filtered_emojis
       );
     }
   }]);

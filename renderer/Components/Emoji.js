@@ -14,6 +14,7 @@ class Emoji extends Component {
   }
   render() {
     let unicode = this.props.unicode;
+    let name = this.props.name;
     return (
       <div>
         <input
@@ -22,6 +23,7 @@ class Emoji extends Component {
           onClick={this.getEmoji.bind(this)}
         />
         {unicode}
+        {name}
       </div>
     );
   }

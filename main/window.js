@@ -20,7 +20,7 @@ exports.createWindow = () => {
     })
   );
 
-  // this.window.openDevTools();
+  this.window.openDevTools();
 
   this.window.on("closed", function() {
     this.window = null;
