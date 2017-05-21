@@ -25,12 +25,6 @@ module.exports = {
   },
   target: "electron-renderer",
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-        drop_console: false
-      }
-    }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "renderer", "dummy.html")
     })

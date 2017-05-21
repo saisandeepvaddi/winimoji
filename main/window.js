@@ -5,7 +5,7 @@ const path = require("path");
 exports.window;
 
 exports.createWindow = () => {
-  this.window = new BrowserWindow({ width: 800, height: 600 });
+  this.window = new BrowserWindow({ width: 300, height: 200, frame: false, maxWidth: 500, maxHeight: 400 });
 
   this.window.loadURL(
     url.format({
@@ -14,6 +14,8 @@ exports.createWindow = () => {
       slashes: true
     })
   );
+  
+  this.window.openDevTools();
 
   this.window.on("closed", function() {
     this.window = null;
