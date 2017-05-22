@@ -9305,7 +9305,6 @@ const unicodesFromFile = filePath => {
 
 module.exports = { fromUnicodeToEmoji, unicodesFromFile };
 
-
 /***/ }),
 /* 81 */
 /***/ (function(module, exports) {
@@ -9359,7 +9358,7 @@ var App = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         "div",
-        null,
+        { className: "container is-fluid" },
         _react2.default.createElement(_EmojiPad2.default, null),
         _react2.default.createElement(_CloseButton2.default, null)
       );
@@ -9500,14 +9499,14 @@ var Emoji = function (_Component) {
       var name = this.props.name;
       return _react2.default.createElement(
         "div",
-        null,
+        { className: "column is-1 is-mobile is-narrow-mobile field is-grouped" },
         _react2.default.createElement("input", {
+          id: "emoji",
           type: "button",
           value: fromUnicodeToEmoji(unicode),
-          onClick: this.getEmoji.bind(this)
-        }),
-        unicode,
-        name
+          onClick: this.getEmoji.bind(this),
+          className: "button is-white"
+        })
       );
     }
   }]);
@@ -9586,7 +9585,7 @@ var EmojiPad = function (_Component) {
       var _this2 = this;
 
       var filtered = this.state.unicodes.filter(function (unicode) {
-        return unicode.name.includes(_this2.emoji_name.value);
+        return unicode.name.toLowerCase().includes(_this2.emoji_name.value.toLowerCase());
       });
 
       this.setState(function (prevState, props) {
@@ -9606,15 +9605,29 @@ var EmojiPad = function (_Component) {
       return _react2.default.createElement(
         "div",
         null,
-        _react2.default.createElement("input", {
-          type: "text",
-          ref: function ref(input) {
-            return _this3.emoji_name = input;
-          },
-          placeholder: "Search Emoji",
-          onChange: this.searchEmoji.bind(this)
-        }),
-        filtered_emojis
+        _react2.default.createElement(
+          "div",
+          { "class": "field is-grouped" },
+          _react2.default.createElement(
+            "p",
+            { className: "control is-expanded" },
+            _react2.default.createElement("input", {
+              id: "searchbox",
+              type: "text",
+              ref: function ref(input) {
+                return _this3.emoji_name = input;
+              },
+              placeholder: "Search Emoji",
+              onChange: this.searchEmoji.bind(this),
+              className: "input"
+            })
+          )
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "columns is-gapless is-multiline is-mobile" },
+          filtered_emojis
+        )
       );
     }
   }]);

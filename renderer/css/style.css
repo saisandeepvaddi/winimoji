@@ -4,6 +4,6 @@ body, html {
     -webkit-app-region: drag;
 }
 
-#root {
+#emoji, #searchbox {
     -webkit-app-region: no-drag;
 }

@@ -30,7 +30,9 @@ class EmojiPad extends Component {
 
   searchEmoji() {
     let filtered = this.state.unicodes.filter(unicode => {
-      return unicode.name.includes(this.emoji_name.value);
+      return unicode.name
+        .toLowerCase()
+        .includes(this.emoji_name.value.toLowerCase());
     });
 
     this.setState((prevState, props) => ({
@@ -46,13 +48,21 @@ class EmojiPad extends Component {
     });
     return (
       <div>
-        <input
-          type="text"
-          ref={input => this.emoji_name = input}
-          placeholder="Search Emoji"
-          onChange={this.searchEmoji.bind(this)}
-        />
-        {filtered_emojis}
+        <div class="field is-grouped">
+          <p className="control is-expanded">
+            <input
+              id="searchbox"
+              type="text"
+              ref={input => this.emoji_name = input}
+              placeholder="Search Emoji"
+              onChange={this.searchEmoji.bind(this)}
+              className="input"
+            />
+          </p>
+        </div>
+        <div className="columns is-gapless is-multiline is-mobile">
+          {filtered_emojis}
+        </div>
       </div>
     );
   }

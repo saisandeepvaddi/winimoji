@@ -67,10 +67,6 @@
         "name": "kissing face with closed eyes"
     },
     {
-        "code": "U+263A",
-        "name": "smiling face"
-    },
-    {
         "code": "U+1F642",
         "name": "slightly smiling face"
     },
@@ -79,16 +75,8 @@
         "name": "hugging face"
     },
     {
-        "code": "U+1F929",
-        "name": "star-struck"
-    },
-    {
         "code": "U+1F914",
         "name": "thinking face"
-    },
-    {
-        "code": "U+1F928",
-        "name": "face with raised eyebrow"
     },
     {
         "code": "U+1F610",
@@ -191,10 +179,6 @@
         "name": "astonished face"
     },
     {
-        "code": "U+2639",
-        "name": "frowning face"
-    },
-    {
         "code": "U+1F641",
         "name": "slightly frowning face"
     },
@@ -239,10 +223,6 @@
         "name": "weary face"
     },
     {
-        "code": "U+1F92F",
-        "name": "exploding head"
-    },
-    {
         "code": "U+1F62C",
         "name": "grimacing face"
     },
@@ -259,10 +239,6 @@
         "name": "flushed face"
     },
     {
-        "code": "U+1F92A",
-        "name": "crazy face"
-    },
-    {
         "code": "U+1F635",
         "name": "dizzy face"
     },
@@ -273,10 +249,6 @@
     {
         "code": "U+1F620",
         "name": "angry face"
-    },
-    {
-        "code": "U+1F92C",
-        "name": "face with symbols over mouth"
     },
     {
         "code": "U+1F637",
@@ -293,10 +265,6 @@
     {
         "code": "U+1F922",
         "name": "nauseated face"
-    },
-    {
-        "code": "U+1F92E",
-        "name": "face vomiting"
     },
     {
         "code": "U+1F927",
@@ -317,18 +285,6 @@
     {
         "code": "U+1F925",
         "name": "lying face"
-    },
-    {
-        "code": "U+1F92B",
-        "name": "shushing face"
-    },
-    {
-        "code": "U+1F92D",
-        "name": "face with hand over mouth"
-    },
-    {
-        "code": "U+1F9D0",
-        "name": "face with monocle"
     },
     {
         "code": "U+1F913",
@@ -431,10 +387,6 @@
         "name": "baby"
     },
     {
-        "code": "U+1F9D2",
-        "name": "child"
-    },
-    {
         "code": "U+1F466",
         "name": "boy"
     },
@@ -443,20 +395,12 @@
         "name": "girl"
     },
     {
-        "code": "U+1F9D1",
-        "name": "adult"
-    },
-    {
         "code": "U+1F468",
         "name": "man"
     },
     {
         "code": "U+1F469",
         "name": "woman"
-    },
-    {
-        "code": "U+1F9D3",
-        "name": "older adult"
     },
     {
         "code": "U+1F474",
@@ -499,14 +443,6 @@
         "name": "man with Chinese cap"
     },
     {
-        "code": "U+1F9D5",
-        "name": "woman with headscarf"
-    },
-    {
-        "code": "U+1F9D4",
-        "name": "bearded person"
-    },
-    {
         "code": "U+1F471",
         "name": "blond-haired person"
     },
@@ -523,10 +459,6 @@
         "name": "pregnant woman"
     },
     {
-        "code": "U+1F931",
-        "name": "breast-feeding"
-    },
-    {
         "code": "U+1F47C",
         "name": "baby angel"
     },
@@ -537,34 +469,6 @@
     {
         "code": "U+1F936",
         "name": "Mrs. Claus"
-    },
-    {
-        "code": "U+1F9D9",
-        "name": "mage"
-    },
-    {
-        "code": "U+1F9DA",
-        "name": "fairy"
-    },
-    {
-        "code": "U+1F9DB",
-        "name": "vampire"
-    },
-    {
-        "code": "U+1F9DC",
-        "name": "merperson"
-    },
-    {
-        "code": "U+1F9DD",
-        "name": "elf"
-    },
-    {
-        "code": "U+1F9DE",
-        "name": "genie"
-    },
-    {
-        "code": "U+1F9DF",
-        "name": "zombie"
     },
     {
         "code": "U+1F64D",
@@ -629,18 +533,6 @@
     {
         "code": "U+1F46F",
         "name": "people with bunny ears partying"
-    },
-    {
-        "code": "U+1F9D6",
-        "name": "person in steamy room"
-    },
-    {
-        "code": "U+1F9D7",
-        "name": "person climbing"
-    },
-    {
-        "code": "U+1F9D8",
-        "name": "person in lotus position"
     },
     {
         "code": "U+1F6C0",
@@ -863,10 +755,6 @@
         "name": "waving hand"
     },
     {
-        "code": "U+1F91F",
-        "name": "love-you gesture"
-    },
-    {
         "code": "U+270D",
         "name": "writing hand"
     },
@@ -881,10 +769,6 @@
     {
         "code": "U+1F64C",
         "name": "raising hands"
-    },
-    {
-        "code": "U+1F932",
-        "name": "palms up together"
     },
     {
         "code": "U+1F64F",
@@ -917,10 +801,6 @@
     {
         "code": "U+1F441",
         "name": "eye"
-    },
-    {
-        "code": "U+1F9E0",
-        "name": "brain"
     },
     {
         "code": "U+1F445",
@@ -973,10 +853,6 @@
     {
         "code": "U+1F49B",
         "name": "yellow heart"
-    },
-    {
-        "code": "U+1F9E1",
-        "name": "orange heart"
     },
     {
         "code": "U+1F49C",
@@ -1075,22 +951,6 @@
         "name": "jeans"
     },
     {
-        "code": "U+1F9E3",
-        "name": "scarf"
-    },
-    {
-        "code": "U+1F9E4",
-        "name": "gloves"
-    },
-    {
-        "code": "U+1F9E5",
-        "name": "coat"
-    },
-    {
-        "code": "U+1F9E6",
-        "name": "socks"
-    },
-    {
         "code": "U+1F457",
         "name": "dress"
     },
@@ -1161,10 +1021,6 @@
     {
         "code": "U+1F393",
         "name": "graduation cap"
-    },
-    {
-        "code": "U+1F9E2",
-        "name": "billed cap"
     },
     {
         "code": "U+26D1",
@@ -1255,10 +1111,6 @@
         "name": "unicorn face"
     },
     {
-        "code": "U+1F993",
-        "name": "zebra"
-    },
-    {
         "code": "U+1F98C",
         "name": "deer"
     },
@@ -1315,10 +1167,6 @@
         "name": "two-hump camel"
     },
     {
-        "code": "U+1F992",
-        "name": "giraffe"
-    },
-    {
         "code": "U+1F418",
         "name": "elephant"
     },
@@ -1353,10 +1201,6 @@
     {
         "code": "U+1F43F",
         "name": "chipmunk"
-    },
-    {
-        "code": "U+1F994",
-        "name": "hedgehog"
     },
     {
         "code": "U+1F987",
@@ -1455,14 +1299,6 @@
         "name": "dragon"
     },
     {
-        "code": "U+1F995",
-        "name": "sauropod"
-    },
-    {
-        "code": "U+1F996",
-        "name": "T-Rex"
-    },
-    {
         "code": "U+1F433",
         "name": "spouting whale"
     },
@@ -1533,10 +1369,6 @@
     {
         "code": "U+1F41E",
         "name": "lady beetle"
-    },
-    {
-        "code": "U+1F997",
-        "name": "cricket"
     },
     {
         "code": "U+1F577",
@@ -1699,10 +1531,6 @@
         "name": "tomato"
     },
     {
-        "code": "U+1F965",
-        "name": "coconut"
-    },
-    {
         "code": "U+1F951",
         "name": "avocado"
     },
@@ -1731,10 +1559,6 @@
         "name": "cucumber"
     },
     {
-        "code": "U+1F966",
-        "name": "broccoli"
-    },
-    {
         "code": "U+1F344",
         "name": "mushroom"
     },
@@ -1759,10 +1583,6 @@
         "name": "baguette bread"
     },
     {
-        "code": "U+1F968",
-        "name": "pretzel"
-    },
-    {
         "code": "U+1F95E",
         "name": "pancakes"
     },
@@ -1777,10 +1597,6 @@
     {
         "code": "U+1F357",
         "name": "poultry leg"
-    },
-    {
-        "code": "U+1F969",
-        "name": "cut of meat"
     },
     {
         "code": "U+1F953",
@@ -1801,10 +1617,6 @@
     {
         "code": "U+1F32D",
         "name": "hot dog"
-    },
-    {
-        "code": "U+1F96A",
-        "name": "sandwich"
     },
     {
         "code": "U+1F32E",
@@ -1835,20 +1647,12 @@
         "name": "pot of food"
     },
     {
-        "code": "U+1F963",
-        "name": "bowl with spoon"
-    },
-    {
         "code": "U+1F957",
         "name": "green salad"
     },
     {
         "code": "U+1F37F",
         "name": "popcorn"
-    },
-    {
-        "code": "U+1F96B",
-        "name": "canned food"
     },
     {
         "code": "U+1F371",
@@ -1903,18 +1707,6 @@
         "name": "dango"
     },
     {
-        "code": "U+1F95F",
-        "name": "dumpling"
-    },
-    {
-        "code": "U+1F960",
-        "name": "fortune cookie"
-    },
-    {
-        "code": "U+1F961",
-        "name": "takeout box"
-    },
-    {
         "code": "U+1F366",
         "name": "soft ice cream"
     },
@@ -1941,10 +1733,6 @@
     {
         "code": "U+1F370",
         "name": "shortcake"
-    },
-    {
-        "code": "U+1F967",
-        "name": "pie"
     },
     {
         "code": "U+1F36B",
@@ -2017,14 +1805,6 @@
     {
         "code": "U+1F943",
         "name": "tumbler glass"
-    },
-    {
-        "code": "U+1F964",
-        "name": "cup with straw"
-    },
-    {
-        "code": "U+1F962",
-        "name": "chopsticks"
     },
     {
         "code": "U+1F37D",

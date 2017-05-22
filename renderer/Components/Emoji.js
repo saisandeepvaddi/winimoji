@@ -16,14 +16,14 @@ class Emoji extends Component {
     let unicode = this.props.unicode;
     let name = this.props.name;
     return (
-      <div>
+      <div className="column is-1 is-mobile is-narrow-mobile field is-grouped">
         <input
+          id="emoji"
           type="button"
           value={fromUnicodeToEmoji(unicode)}
           onClick={this.getEmoji.bind(this)}
+          className="button is-white"
         />
-        {unicode}
-        {name}
       </div>
     );
   }

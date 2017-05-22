@@ -6,8 +6,12 @@ exports.window;
 
 exports.createWindow = () => {
   this.window = new BrowserWindow({
-    width: 400,
+    width: 500,
     height: 300,
+    minWidth: 500,
+    minHeight: 300,
+    maxWidth: 600,
+    maxHeight: 400,
     frame: false,
     show: false
   });
@@ -20,7 +24,7 @@ exports.createWindow = () => {
     })
   );
 
-  this.window.openDevTools();
+  // this.window.openDevTools();
 
   this.window.on("closed", function() {
     this.window = null;
