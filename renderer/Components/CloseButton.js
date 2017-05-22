@@ -7,7 +7,7 @@ class CloseButton extends Component {
     }
     render() {
         return (
-            <div>
+            <div id="close-button">
                 <button onClick={this.closeWindow.bind(this)}>Close X</button>
             </div>
         );

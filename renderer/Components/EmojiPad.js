@@ -48,7 +48,7 @@ class EmojiPad extends Component {
     });
     return (
       <div>
-        <div class="field is-grouped">
+        <div id="searchbox-container" class="field is-grouped">
           <p className="control is-expanded">
             <input
               id="searchbox"

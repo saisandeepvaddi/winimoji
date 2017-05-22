@@ -17,13 +17,16 @@ class Emoji extends Component {
     let name = this.props.name;
     return (
       <div className="column is-1 is-mobile is-narrow-mobile field is-grouped">
-        <input
-          id="emoji"
-          type="button"
-          value={fromUnicodeToEmoji(unicode)}
-          onClick={this.getEmoji.bind(this)}
-          className="button is-white"
-        />
+        <abbr title={name}>
+          <input
+            id="emoji"
+            type="button"
+            value={fromUnicodeToEmoji(unicode)}
+            onClick={this.getEmoji.bind(this)}
+            className="button is-white"
+          />
+
+        </abbr>
       </div>
     );
   }

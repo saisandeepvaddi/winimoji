@@ -5,7 +5,7 @@ import EmojiPad from "./EmojiPad";
 class App extends Component {
   render() {
     return (
-      <div className="container is-fluid">
+      <div id="app-container" className="container is-fluid">
         <EmojiPad />
         <CloseButton />
       </div>

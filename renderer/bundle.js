@@ -9358,7 +9358,7 @@ var App = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         "div",
-        { className: "container is-fluid" },
+        { id: "app-container", className: "container is-fluid" },
         _react2.default.createElement(_EmojiPad2.default, null),
         _react2.default.createElement(_CloseButton2.default, null)
       );
@@ -9427,7 +9427,7 @@ var CloseButton = function (_Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                null,
+                { id: 'close-button' },
                 _react2.default.createElement(
                     'button',
                     { onClick: this.closeWindow.bind(this) },
@@ -9500,13 +9500,17 @@ var Emoji = function (_Component) {
       return _react2.default.createElement(
         "div",
         { className: "column is-1 is-mobile is-narrow-mobile field is-grouped" },
-        _react2.default.createElement("input", {
-          id: "emoji",
-          type: "button",
-          value: fromUnicodeToEmoji(unicode),
-          onClick: this.getEmoji.bind(this),
-          className: "button is-white"
-        })
+        _react2.default.createElement(
+          "abbr",
+          { title: name },
+          _react2.default.createElement("input", {
+            id: "emoji",
+            type: "button",
+            value: fromUnicodeToEmoji(unicode),
+            onClick: this.getEmoji.bind(this),
+            className: "button is-white"
+          })
+        )
       );
     }
   }]);
@@ -9607,7 +9611,7 @@ var EmojiPad = function (_Component) {
         null,
         _react2.default.createElement(
           "div",
-          { "class": "field is-grouped" },
+          { id: "searchbox-container", "class": "field is-grouped" },
           _react2.default.createElement(
             "p",
             { className: "control is-expanded" },
