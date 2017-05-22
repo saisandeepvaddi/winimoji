@@ -9328,13 +9328,13 @@ var _react = __webpack_require__(19);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _CloseButton = __webpack_require__(84);
-
-var _CloseButton2 = _interopRequireDefault(_CloseButton);
-
 var _EmojiPad = __webpack_require__(86);
 
 var _EmojiPad2 = _interopRequireDefault(_EmojiPad);
+
+var _Banner = __webpack_require__(191);
+
+var _Banner2 = _interopRequireDefault(_Banner);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -9359,8 +9359,7 @@ var App = function (_Component) {
       return _react2.default.createElement(
         "div",
         { id: "app-container", className: "container is-fluid" },
-        _react2.default.createElement(_EmojiPad2.default, null),
-        _react2.default.createElement(_CloseButton2.default, null)
+        _react2.default.createElement(_EmojiPad2.default, null)
       );
     }
   }]);
@@ -9388,7 +9387,7 @@ module.exports = __webpack_require__(118);
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -9409,35 +9408,35 @@ var electron = __webpack_require__(81);
 var remote = electron.remote;
 
 var CloseButton = function (_Component) {
-    _inherits(CloseButton, _Component);
+  _inherits(CloseButton, _Component);
 
-    function CloseButton() {
-        _classCallCheck(this, CloseButton);
+  function CloseButton() {
+    _classCallCheck(this, CloseButton);
 
-        return _possibleConstructorReturn(this, (CloseButton.__proto__ || Object.getPrototypeOf(CloseButton)).apply(this, arguments));
+    return _possibleConstructorReturn(this, (CloseButton.__proto__ || Object.getPrototypeOf(CloseButton)).apply(this, arguments));
+  }
+
+  _createClass(CloseButton, [{
+    key: "closeWindow",
+    value: function closeWindow() {
+      var win = remote.getCurrentWindow().close();
     }
+  }, {
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        { id: "close-button-div" },
+        _react2.default.createElement("button", {
+          id: "close-button",
+          onClick: this.closeWindow.bind(this),
+          className: "delete is-small button is-danger"
+        })
+      );
+    }
+  }]);
 
-    _createClass(CloseButton, [{
-        key: 'closeWindow',
-        value: function closeWindow() {
-            var win = remote.getCurrentWindow().close();
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                { id: 'close-button' },
-                _react2.default.createElement(
-                    'button',
-                    { onClick: this.closeWindow.bind(this) },
-                    'Close X'
-                )
-            );
-        }
-    }]);
-
-    return CloseButton;
+  return CloseButton;
 }(_react.Component);
 
 exports.default = CloseButton;
@@ -9541,6 +9540,10 @@ var _Emoji = __webpack_require__(85);
 
 var _Emoji2 = _interopRequireDefault(_Emoji);
 
+var _CloseButton = __webpack_require__(84);
+
+var _CloseButton2 = _interopRequireDefault(_CloseButton);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -9611,7 +9614,7 @@ var EmojiPad = function (_Component) {
         null,
         _react2.default.createElement(
           "div",
-          { id: "searchbox-container", "class": "field is-grouped" },
+          { id: "searchbox-container", className: "field is-grouped" },
           _react2.default.createElement(
             "p",
             { className: "control is-expanded" },
@@ -9625,6 +9628,16 @@ var EmojiPad = function (_Component) {
               onChange: this.searchEmoji.bind(this),
               className: "input"
             })
+          ),
+          _react2.default.createElement(
+            "p",
+            { id: "draggable", className: "control" },
+            "\u2725"
+          ),
+          _react2.default.createElement(
+            "p",
+            { className: "control" },
+            _react2.default.createElement(_CloseButton2.default, null)
           )
         ),
         _react2.default.createElement(
@@ -39242,6 +39255,37 @@ module.exports = require("fs");
 /***/ (function(module, exports) {
 
 module.exports = require("path");
+
+/***/ }),
+/* 191 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(19);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Banner = function Banner() {
+    return _react2.default.createElement(
+        "div",
+        null,
+        _react2.default.createElement(
+            "h1",
+            { className: "title is-spaced has-text-centered" },
+            "Winimoji"
+        )
+    );
+};
+
+exports.default = Banner;
 
 /***/ })
 /******/ ]);

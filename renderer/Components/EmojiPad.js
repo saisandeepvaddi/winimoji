@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 const { unicodesFromFile } = require("../../utilities/unicodeUtils");
 import Emoji from "./Emoji";
+import CloseButton from "./CloseButton";
 const path = require("path");
 const _ = require("lodash");
 
@@ -48,7 +49,7 @@ class EmojiPad extends Component {
     });
     return (
       <div>
-        <div id="searchbox-container" class="field is-grouped">
+        <div id="searchbox-container" className="field is-grouped">
           <p className="control is-expanded">
             <input
               id="searchbox"
@@ -59,6 +60,13 @@ class EmojiPad extends Component {
               className="input"
             />
           </p>
+          <p id="draggable" className="control">
+            ✥
+          </p>
+          <p className="control">
+            <CloseButton />
+          </p>
+
         </div>
         <div className="columns is-gapless is-multiline is-mobile">
           {filtered_emojis}
