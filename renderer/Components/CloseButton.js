@@ -1,19 +1,18 @@
 import React, { Component } from "react";
 const electron = require("electron");
-const { remote } = electron;
+const { BrowserWindow } = electron.remote;
 class CloseButton extends Component {
   closeWindow() {
-    const win = remote.getCurrentWindow().close();
+    console.log("Closing Window");
+    BrowserWindow.getFocusedWindow().close();
   }
   render() {
     return (
-      <div id="close-button-div">
         <button
           id="close-button"
           onClick={this.closeWindow.bind(this)}
           className="delete is-small button is-danger"
         />
-      </div>
     );
   }
 }

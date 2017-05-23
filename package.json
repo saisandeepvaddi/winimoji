@@ -6,7 +6,14 @@
   "scripts": {
     "test": "jest --watch",
     "webpack": "webpack",
-    "electron": "electron ."
+    "electron": "electron .",
+    "pack": "build --dir",
+    "dist": "build"
+  },
+  "build": {
+    "appId": "com.saisandeepvaddi.winimoji",
+    "compression": "maximum",
+    "extraFiles":["./data/*"]
   },
   "repository": "https://github.com/saisandeepvaddi/winimoji",
   "keywords": [
@@ -29,6 +36,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "devtron": "^1.4.0",
     "electron": "~1.6.2",
+    "electron-builder": "^17.10.0",
     "electron-reload": "^1.2.0",
     "enzyme": "2.8.2",
     "html-webpack-plugin": "^2.28.0",

@@ -24,8 +24,6 @@ exports.createWindow = () => {
     })
   );
 
-
-
   // this.window.openDevTools();
 
   this.window.on("closed", function() {
