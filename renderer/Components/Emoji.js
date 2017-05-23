@@ -7,7 +7,6 @@ class Emoji extends Component {
   getEmoji(e) {
     e.preventDefault();
     let emoji = e.target.value;
-    console.log(emoji);
     clipboard.write({
       text: e.target.value
     });
