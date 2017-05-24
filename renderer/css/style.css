@@ -4,7 +4,7 @@ body, html {
     -webkit-app-region: drag;
 }
 
-#emoji, #searchbox {
+#emoji, #searchbox, #hotkey_form {
     -webkit-app-region: no-drag;
 }
 

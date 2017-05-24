@@ -13,7 +13,9 @@
   "build": {
     "appId": "com.saisandeepvaddi.winimoji",
     "compression": "maximum",
-    "extraFiles":["./data/*"]
+    "extraFiles": [
+      "./data/*"
+    ]
   },
   "repository": "https://github.com/saisandeepvaddi/winimoji",
   "keywords": [
@@ -50,6 +52,7 @@
     "webpack-dev-server": "^2.4.5"
   },
   "dependencies": {
+    "electron-settings": "^3.0.14",
     "lodash": "^4.17.4",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"

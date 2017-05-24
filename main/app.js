@@ -1,29 +1,26 @@
 const electron = require("electron");
-const { app, globalShortcut, Menu, Tray } = electron;
+const { app, globalShortcut, Menu, Tray, ipcMain } = electron;
 const path = require("path");
 const window = require("./window");
 const trayMenu = require("./trayMenu");
+const { registerHotKey } = require("../utilities/mainProcessUtils");
 
-const accelerator = "CommandOrControl+Shift+E";
+let accelerator;
 let tray = null;
+let win;
+
+ipcMain.on("change-hotkey", (event, arg) => {
+  globalShortcut.unregisterAll();
+  const newHotKey = `${arg.modifier1}+${arg.modifier2}+${arg.key}`;
+  registerHotKey(win, newHotKey);
+});
 
 app.on("ready", () => {
-  let win = window.createWindow();
+  win = window.createWindow();
   tray = new Tray(path.resolve(__dirname, "..", "icons", "icon.png"));
   tray.setToolTip("Winimoji");
   tray.setContextMenu(trayMenu);
-  const ret = globalShortcut.register(accelerator, () => {
-    console.log("Emoji Copied");
-    if (!win.isVisible()) {
-      win.show();
-    } else {
-      win.hide();
-    }
-  });
-
-  if (!ret) {
-    console.log("registration failed");
-  }
+  registerHotKey(win);
 });
 
 app.on("window-all-closed", function() {
