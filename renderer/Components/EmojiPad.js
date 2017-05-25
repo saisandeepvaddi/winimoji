@@ -55,7 +55,7 @@ class EmojiPad extends Component {
               id="searchbox"
               type="text"
               ref={input => this.emoji_name = input}
-              placeholder="Search Emoji"
+              placeholder="Search Winimoji"
               onChange={this.searchEmoji.bind(this)}
               className="input"
             />

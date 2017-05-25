@@ -1,5 +1,5 @@
 const electron = require("electron");
-const { globalShortcut, session } = electron;
+const { globalShortcut } = electron;
 const settings = require("electron-settings");
 const defaultAccelerator = "CommandOrControl+Shift+E";
 

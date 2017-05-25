@@ -9651,7 +9651,7 @@ var EmojiPad = function (_Component) {
               ref: function ref(input) {
                 return _this3.emoji_name = input;
               },
-              placeholder: "Search Emoji",
+              placeholder: "Search Winimoji",
               onChange: this.searchEmoji.bind(this),
               className: "input"
             })

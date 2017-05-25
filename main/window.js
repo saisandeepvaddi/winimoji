@@ -13,7 +13,9 @@ exports.createWindow = () => {
     maxWidth: 600,
     maxHeight: 400,
     frame: false,
-    show: false
+    show: false,
+    maximizable: false,
+    icon: path.resolve(__dirname, "..", "icons", "icon.png")
   });
 
   this.window.loadURL(

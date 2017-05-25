@@ -7,10 +7,11 @@ exports.hotkeyWindow;
 exports.createHotkeyWindow = () => {
   this.hotkeyWindow = new BrowserWindow({
     width: 500,
-    height: 100,
+    height: 150,
     frame: false,
     show: false,
-    resizable: false
+    resizable: true,
+    icon: path.resolve(__dirname, "..", "icons", "icon.png")
   });
 
   this.hotkeyWindow.loadURL(
@@ -20,7 +21,7 @@ exports.createHotkeyWindow = () => {
       slashes: true
     })
   );
-//   this.hotkeyWindow.openDevTools();
+  //   this.hotkeyWindow.openDevTools();
   this.hotkeyWindow.on("closed", function() {
     this.hotkeyWindow = null;
   });
