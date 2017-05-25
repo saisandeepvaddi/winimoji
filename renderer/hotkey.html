@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Change Hotkey</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../bower_components/bulma/css/bulma.css">
-        <link rel="stylesheet" href="./css/style.css">
-    </head>
-    <body>
+
+<head>
+    <title>Change Hotkey</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../bower_components/bulma/css/bulma.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="is-marginless is-paddingless has-text-centered is-unselectable">
         <form id="hotkey_form" action="./hotkey.js">
             <select id="modifier1" required>
                 <option value="CommandOrControl">Ctrl</option>
@@ -52,6 +56,10 @@
             <input type="submit" name="submit" value="Set">
         </form>
         <button type="button" id="close-button" class="delete is-small button is-danger"></button>
-        <script src="./hotkey.js"></script>
-    </body>
+        </div>
+    </div>
+    <script src="./hotkey.js"></script>
+
+</body>
+
 </html>

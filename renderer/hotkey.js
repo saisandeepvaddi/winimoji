@@ -1,6 +1,8 @@
 const electron = require("electron");
 const { remote, ipcRenderer } = electron;
 
+
+
 document.getElementById("hotkey_form").addEventListener("submit", function(e) {
   e.preventDefault();
   let modifier1 = document.getElementById("modifier1").value;

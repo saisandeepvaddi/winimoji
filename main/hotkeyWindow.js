@@ -9,7 +9,8 @@ exports.createHotkeyWindow = () => {
     width: 500,
     height: 100,
     frame: false,
-    show: false
+    show: false,
+    resizable: false
   });
 
   this.hotkeyWindow.loadURL(
