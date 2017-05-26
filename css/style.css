@@ -11,14 +11,19 @@ body {
     align-items: center;
 }
 
-.info,
-.demo {
-    margin: auto;
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
 }
 
-.download {
+.app-name {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 #download-btn {
