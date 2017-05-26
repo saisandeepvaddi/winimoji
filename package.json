@@ -1,5 +1,5 @@
 {
-  "name": "winimoji",
+  "name": "Winimoji",
   "version": "1.0.0",
   "description": "A emoji keyboard application",
   "main": "main.js",
@@ -15,7 +15,8 @@
     "compression": "maximum",
     "extraFiles": [
       "./data/*"
-    ]
+    ],
+    "productName": "Winimoji"
   },
   "repository": "https://github.com/saisandeepvaddi/winimoji",
   "keywords": [
