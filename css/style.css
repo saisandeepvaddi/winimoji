@@ -1,0 +1,32 @@
+body {
+    height: 100vh;
+    text-rendering: optimizeLegibility;
+    background-color: #BEBBBB;
+}
+
+.cover {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info,
+.demo {
+    margin: auto;
+}
+
+.download {
+    display: flex;
+    justify-content: center;
+}
+
+#download-btn {
+    background-color: #2F243A;
+    border: 0;
+}
+
+#demo-img {
+    height: 400px;
+    width: 750px;
+}
