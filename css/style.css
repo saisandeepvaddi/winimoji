@@ -26,7 +26,7 @@ body {
     align-items: center;
 }
 
-#download-btn {
+#download-btn, #github-btn {
     background-color: #2F243A;
     border: 0;
 }
@@ -34,4 +34,14 @@ body {
 #demo-img {
     height: 400px;
     width: 750px;
+}
+
+a#my-twitter-id, a#licence
+{
+    text-decoration: none;
+    color: #2F243A;
+    font-weight: bold;
+}
+a#my-twitter-id:hover, a#licence:hover{
+    color: white;
 }
