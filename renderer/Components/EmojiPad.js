@@ -1,48 +1,25 @@
 import React, { Component } from "react";
-const { unicodesFromFile } = require("../../utilities/unicodeUtils");
 import Emoji from "./Emoji";
 import CloseButton from "./CloseButton";
-const path = require("path");
-const _ = require("lodash");
+import { connect } from "react-redux";
+import { getAllEmojis, getEmojis, makeAllUniqueUnicodes } from "../actions";
 
 class EmojiPad extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      unicodes: [],
-      emojis: []
-    };
-  }
   componentDidMount() {
-    const filePath = path.resolve(
-      __dirname,
-      "..",
-      "..",
-      "data",
-      "emoji_unicode_objects.json"
-    );
-    let unicodes = unicodesFromFile(filePath);
-    unicodes = _.uniqBy(unicodes, "code");
-    this.setState((prevState, props) => ({
-      unicodes,
-      emojis: unicodes
-    }));
+    this.props.getAllEmojis();
+    this.emoji_name.focus();
   }
 
   searchEmoji() {
-    let filtered = this.state.unicodes.filter(unicode => {
-      return unicode.name
-        .toLowerCase()
-        .includes(this.emoji_name.value.toLowerCase());
-    });
-
-    this.setState((prevState, props) => ({
-      emojis: filtered
-    }));
+    if (this.emoji_name.value === "") {
+      this.props.getAllEmojis();
+    } else {
+      this.props.getEmojis(this.emoji_name.value);
+    }
   }
 
   render() {
-    let filtered_emojis = this.state.emojis.map(unicode => {
+    let filtered_emojis = this.props.emojis.map(unicode => {
       return (
         <Emoji unicode={unicode.code} name={unicode.name} key={unicode.code} />
       );
@@ -54,7 +31,7 @@ class EmojiPad extends Component {
             <input
               id="searchbox"
               type="text"
-              ref={input => this.emoji_name = input}
+              ref={input => (this.emoji_name = input)}
               placeholder="Search Winimoji"
               onChange={this.searchEmoji.bind(this)}
               className="input"
@@ -66,7 +43,6 @@ class EmojiPad extends Component {
           <p className="control">
             <CloseButton />
           </p>
-
         </div>
         <div className="columns is-gapless is-multiline is-mobile">
           {filtered_emojis}
@@ -76,4 +52,12 @@ class EmojiPad extends Component {
   }
 }
 
-export default EmojiPad;
+const mapStateToProps = state => {
+  const { emojis } = state;
+  return { emojis };
+};
+
+export default connect(mapStateToProps, {
+  getAllEmojis,
+  getEmojis
+})(EmojiPad);

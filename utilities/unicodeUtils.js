@@ -8,9 +8,4 @@ const fromUnicodeToEmoji = unicode => {
   return String.fromCodePoint(hex);
 };
 
-const unicodesFromFile = filePath => {
-  let unicodes = fs.readFileSync(filePath, "utf8");
-  return JSON.parse(unicodes);
-};
-
-module.exports = { fromUnicodeToEmoji, unicodesFromFile };
+module.exports = { fromUnicodeToEmoji };

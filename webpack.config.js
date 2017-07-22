@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   entry: path.resolve(__dirname, "renderer", "renderer.js"),
   output: {
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
     path: path.resolve(__dirname, "renderer")
   },
   module: {
@@ -13,11 +13,11 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        include: [path.resolve(__dirname, "renderer")],
+        // include: [path.resolve(__dirname, "renderer")],
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["env", "es2015", "stage-2", "react"]
+            presets: ["env", "stage-3", "react"]
           }
         }
       }
@@ -29,6 +29,14 @@ module.exports = {
   },
   target: "electron-renderer",
   plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: "common"
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compressor: {
+        warnings: false
+      }
+    }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "renderer", "dummy.html")
     })

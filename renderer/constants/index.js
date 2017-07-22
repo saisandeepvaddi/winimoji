@@ -1,0 +1,3 @@
+export const GET_ALL_EMOJIS = "GET_ALL_EMOJIS";
+export const GET_EMOJIS = "GET_EMOJIS";
+export const MAKE_UNIQ_UNICODES = "MAKE_UNIQ_UNICODES";
