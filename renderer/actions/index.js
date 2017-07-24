@@ -21,9 +21,10 @@ export const getAllEmojis = () => {
 };
 
 export const getEmojis = searchTerm => {
-  const emojisForTerm = uniqUnicodes.filter(unicode => {
-    return unicode.name.toLowerCase().includes(searchTerm);
+  const emojisForTerm = _.filter(uniqUnicodes, o => {
+    return o.name.toLowerCase().includes(searchTerm);
   });
+
   return {
     type: GET_EMOJIS,
     payload: emojisForTerm
