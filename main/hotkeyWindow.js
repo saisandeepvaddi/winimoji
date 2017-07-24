@@ -8,6 +8,10 @@ exports.createHotkeyWindow = () => {
   this.hotkeyWindow = new BrowserWindow({
     width: 500,
     height: 150,
+    maxWidth: 500,
+    maxHeight: 150,
+    minWidth: 500,
+    minHeight: 150,
     frame: false,
     show: false,
     resizable: true,
