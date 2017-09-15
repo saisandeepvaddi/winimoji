@@ -46,6 +46,12 @@ Download from [here](https://saisandeepvaddi.github.io/winimoji/)
 
 - Builds are made using [electron-builder](2)
 
+- Make sure you comment the electron-reload line in [main.js](/main.js)
+
+  ```js
+    require("electron-reload")(__dirname);
+  ```
+
 - To generate only a package directory
 
   ```shell
