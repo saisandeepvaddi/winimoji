@@ -3,6 +3,7 @@ import Emoji from "./Emoji";
 import CloseButton from "./CloseButton";
 import { connect } from "react-redux";
 import { getAllEmojis, getEmojis, makeAllUniqueUnicodes } from "../actions";
+import debounce from "lodash/debounce";
 
 class EmojiPad extends Component {
   componentDidMount() {
@@ -33,7 +34,10 @@ class EmojiPad extends Component {
               type="text"
               ref={input => (this.emoji_name = input)}
               placeholder="Search Winimoji"
-              onChange={this.searchEmoji.bind(this)}
+              onChange={debounce(this.searchEmoji.bind(this), 150, {
+                leading: false,
+                trailing: true
+              })}
               className="input"
             />
           </p>
