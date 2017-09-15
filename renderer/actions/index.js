@@ -1,27 +1,27 @@
 import _ from "lodash";
 import { GET_ALL_EMOJIS, GET_EMOJIS, MAKE_UNIQ_UNICODES } from "../constants";
-import unicodes from "./unicodes";
+// import unicodes from "./unicodes";
+import unicodes from "./unicodesFormatted.json";
 
-let uniqUnicodes = [];
+// let uniqUnicodes = [];
 
-export const makeAllUniqueUnicodes = () => {
-  uniqUnicodes = _.uniqBy(unicodes, "code");
-  return uniqUnicodes;
+export const setupInitialEmojis = () => {
+  return unicodes;
 };
 
-const getAllUniqueEmojis = () => {
-  return uniqUnicodes;
-};
+// const getAllUniqueEmojis = () => {
+//   return uniqUnicodes;
+// };
 
 export const getAllEmojis = () => {
   return {
     type: GET_ALL_EMOJIS,
-    payload: uniqUnicodes
+    payload: unicodes
   };
 };
 
 export const getEmojis = searchTerm => {
-  const emojisForTerm = _.filter(uniqUnicodes, o => {
+  const emojisForTerm = _.filter(unicodes, o => {
     return o.name.toLowerCase().includes(searchTerm);
   });
 

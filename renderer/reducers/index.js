@@ -1,8 +1,8 @@
 import { GET_ALL_EMOJIS, GET_EMOJIS } from "../constants";
-import { makeAllUniqueUnicodes } from "../actions";
+import { setupInitialEmojis } from "../actions";
 
 const INITIAL_STATE = {
-  emojis: makeAllUniqueUnicodes()
+  emojis: setupInitialEmojis()
 };
 
 export default (state = INITIAL_STATE, action) => {

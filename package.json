@@ -8,7 +8,8 @@
     "webpack": "webpack",
     "electron": "electron .",
     "pack": "build --dir",
-    "dist": "build"
+    "dist": "build",
+    "make-unicodes": "node ./utilities/unicodeUtils.js"
   },
   "build": {
     "appId": "com.saisandeepvaddi.winimoji",
@@ -16,13 +17,7 @@
     "productName": "Winimoji"
   },
   "repository": "https://github.com/saisandeepvaddi/winimoji",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
+  "keywords": ["Electron", "quick", "start", "tutorial", "demo"],
   "author": "Sai Sandeep Vaddi <saisandeepvaddi@gmail.com>",
   "license": "MIT",
   "devDependencies": {
