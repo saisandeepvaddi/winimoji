@@ -8,7 +8,9 @@ Download from [here](https://saisandeepvaddi.github.io/winimoji/)
 
 ## Demo
 
-![demo](https://saisandeepvaddi.github.io/winimoji/img/demo.gif | width=250)
+<p align="center">
+  <img style="margin: 0 auto;" src="https://saisandeepvaddi.github.io/winimoji/img/demo.gif" width="600px">
+</p>
 
 ## For Developers
 
