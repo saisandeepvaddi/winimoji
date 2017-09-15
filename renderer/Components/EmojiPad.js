@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Emoji from "./Emoji";
 import CloseButton from "./CloseButton";
 import { connect } from "react-redux";
-import { getAllEmojis, getEmojis, makeAllUniqueUnicodes } from "../actions";
+import { getAllEmojis, getEmojis } from "../actions";
 import debounce from "lodash/debounce";
 
 class EmojiPad extends Component {

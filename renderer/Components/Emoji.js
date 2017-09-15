@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-const { fromUnicodeToEmoji } = require("../../utilities/unicodeUtils");
 const electron = require("electron");
 const { clipboard } = electron;
 
@@ -18,7 +17,7 @@ const Emoji = ({ unicode, name }) => {
         <input
           id="emoji"
           type="button"
-          value={fromUnicodeToEmoji(unicode)}
+          value={unicode}
           onClick={copyEmojiToClipBoard}
           className="button is-white"
         />

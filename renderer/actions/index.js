@@ -1,17 +1,10 @@
 import _ from "lodash";
-import { GET_ALL_EMOJIS, GET_EMOJIS, MAKE_UNIQ_UNICODES } from "../constants";
-// import unicodes from "./unicodes";
+import { GET_ALL_EMOJIS, GET_SEARCHED_EMOJIS } from "../constants";
 import unicodes from "./unicodesFormatted.json";
-
-// let uniqUnicodes = [];
 
 export const setupInitialEmojis = () => {
   return unicodes;
 };
-
-// const getAllUniqueEmojis = () => {
-//   return uniqUnicodes;
-// };
 
 export const getAllEmojis = () => {
   return {
@@ -22,11 +15,11 @@ export const getAllEmojis = () => {
 
 export const getEmojis = searchTerm => {
   const emojisForTerm = _.filter(unicodes, o => {
-    return o.name.toLowerCase().includes(searchTerm);
+    return o.name.toLowerCase().includes(searchTerm.toLowerCase());
   });
 
   return {
-    type: GET_EMOJIS,
+    type: GET_SEARCHED_EMOJIS,
     payload: emojisForTerm
   };
 };

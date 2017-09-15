@@ -1,4 +1,4 @@
-import { GET_ALL_EMOJIS, GET_EMOJIS } from "../constants";
+import { GET_ALL_EMOJIS, GET_SEARCHED_EMOJIS } from "../constants";
 import { setupInitialEmojis } from "../actions";
 
 const INITIAL_STATE = {
@@ -10,7 +10,7 @@ export default (state = INITIAL_STATE, action) => {
     case GET_ALL_EMOJIS:
       return { ...state, emojis: action.payload };
 
-    case GET_EMOJIS:
+    case GET_SEARCHED_EMOJIS:
       return { ...state, emojis: action.payload };
 
     default:

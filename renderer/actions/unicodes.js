@@ -1,4 +1,4 @@
-export default [
+module.exports = [
   {
     code: "U+1F600",
     name: "grinning face"
