@@ -4,7 +4,7 @@ const electron = require("electron");
 const { clipboard } = electron;
 
 const Emoji = ({ unicode, name }) => {
-  const getEmoji = e => {
+  const copyEmojiToClipBoard = e => {
     e.preventDefault();
     let emoji = e.target.value;
     clipboard.write({
@@ -19,7 +19,7 @@ const Emoji = ({ unicode, name }) => {
           id="emoji"
           type="button"
           value={fromUnicodeToEmoji(unicode)}
-          onClick={getEmoji}
+          onClick={copyEmojiToClipBoard}
           className="button is-white"
         />
       </abbr>
