@@ -6,6 +6,9 @@ Search :point_right: Click :point_right: Paste Anywhere :sunglasses:
 
 Download from [here](https://saisandeepvaddi.github.io/winimoji/)
 
+## Demo
+
+![demo](demo)
 
 ## For Developers
 
@@ -70,5 +73,6 @@ Download from [here](https://saisandeepvaddi.github.io/winimoji/)
 [MIT](/LICENSE) 
 
 
-[1]: 'http://unicode.org/emoji/charts/full-emoji-list.html'
-[2]: 'https://www.npmjs.com/package/electron-builder
+[1]: http://unicode.org/emoji/charts/full-emoji-list.html
+[2]: https://www.npmjs.com/package/electron-builder
+[demo]: https://saisandeepvaddi.github.io/winimoji/img/demo.gif
