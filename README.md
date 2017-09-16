@@ -69,6 +69,12 @@ Download from [here](https://saisandeepvaddi.github.io/winimoji/)
    $> npm run dist
   ```
 
+## Roadmap
+
+- Faster search
+- Categorization
+- Favorites
+- Better Design
 
 ## License
 
