@@ -9,7 +9,8 @@
     "electron": "electron .",
     "pack": "build --dir",
     "dist": "build",
-    "make-unicodes": "node ./utilities/unicodeUtils.js"
+    "make-unicodes": "node ./utilities/unicodeUtils.js",
+    "make-emojis": "node ./utilities/emojiBuilder.js"
   },
   "build": {
     "appId": "com.saisandeepvaddi.winimoji",
