@@ -10,6 +10,7 @@
     "pack": "build --dir",
     "dist": "build",
     "make-unicodes": "node ./utilities/unicodeUtils.js",
+    "make-emojis-babel": "babel --no-babelrc ./utilities/emojiBuilderWithSpread.js --out-file ./utilities/emojiBuilder.js --presets=env,stage-3",
     "make-emojis": "node ./utilities/emojiBuilder.js"
   },
   "build": {
@@ -18,11 +19,18 @@
     "productName": "Winimoji"
   },
   "repository": "https://github.com/saisandeepvaddi/winimoji",
-  "keywords": ["Electron", "quick", "start", "tutorial", "demo"],
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
   "author": "Sai Sandeep Vaddi <saisandeepvaddi@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.24.1",
     "babel-jest": "20.0.3",
     "babel-loader": "^7.0.0",
