@@ -1,8 +1,16 @@
 import { GET_ALL_EMOJIS, GET_SEARCHED_EMOJIS } from "../constants";
-import { setupInitialEmojis } from "../actions";
+import { setupInitialEmojis, getEmojisForCategory } from "../actions";
 
 const INITIAL_STATE = {
-  emojis: setupInitialEmojis()
+  allEmojis: setupInitialEmojis(),
+  1: getEmojisForCategory(1),
+  2: getEmojisForCategory(2),
+  3: getEmojisForCategory(3),
+  4: getEmojisForCategory(4),
+  5: getEmojisForCategory(5),
+  6: getEmojisForCategory(6),
+  7: getEmojisForCategory(7),
+  8: getEmojisForCategory(8)
 };
 
 export default (state = INITIAL_STATE, action) => {

@@ -2,6 +2,8 @@
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
+function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var fs = require("fs");
@@ -11,16 +13,22 @@ var path = require("path");
 
 var inputFilePath = path.resolve(__dirname, "..", "data", "emoji-test.txt");
 var outputFilePath = path.resolve(__dirname, "..", "data", "emojis.json");
+var pureEmojiOutput = path.resolve(__dirname, "..", "data", "pure-emojis.json");
 
 var data = [];
 
 // Create output file if doesn't exist
 
 fs.closeSync(fs.openSync(outputFilePath, "w"));
+fs.closeSync(fs.openSync(pureEmojiOutput, "w"));
 var inputStream = fs.createReadStream(inputFilePath, {
   encoding: "utf-8"
 });
 var outputStream = fs.createWriteStream(outputFilePath, {
+  encoding: "utf-8"
+});
+
+var pureEMojiOutputStream = fs.createWriteStream(pureEmojiOutput, {
   encoding: "utf-8"
 });
 
@@ -61,10 +69,14 @@ var group = void 0,
     emoji = void 0;
 var id = 1;
 
+var k = 1;
+var pureEmojis = [];
+
 rl.on("line", function (line) {
   if ((group = line.match(checkGroupRegExp)) !== null) {
     var groupName = group[1];
     currentGroup = groupName;
+    console.log(" " + k++ + " : " + currentGroup);
     if (!data.hasOwnProperty(currentGroup)) {
       data = _extends({}, data, _defineProperty({}, currentGroup, {}));
     }
@@ -78,6 +90,7 @@ rl.on("line", function (line) {
     }
   } else if ((emoji = line.match(checkEmojiRegExp)) !== null) {
     var emojiObj = createEmoji(emoji);
+    pureEmojis = [].concat(_toConsumableArray(pureEmojis), [emojiObj]);
     if (currentGroup && currentSubgroup) {
       data = _extends({}, data, _defineProperty({}, currentGroup, _extends({}, data[currentGroup], _defineProperty({}, currentSubgroup, _extends({}, data[currentGroup][currentSubgroup], _defineProperty({}, emojiObj.unicode, emojiObj))))));
     }
@@ -86,5 +99,6 @@ rl.on("line", function (line) {
 
 rl.on("close", function () {
   outputStream.write(JSON.stringify(data, null, 2));
+  pureEMojiOutputStream.write(JSON.stringify(pureEmojis, null, 2));
   console.log("Finished");
 });

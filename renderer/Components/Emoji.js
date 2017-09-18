@@ -17,7 +17,7 @@ const Emoji = ({ unicode, name }) => {
         <input
           id="emoji"
           type="button"
-          value={unicode}
+          value={emoji}
           onClick={copyEmojiToClipBoard}
           className="button is-white"
         />

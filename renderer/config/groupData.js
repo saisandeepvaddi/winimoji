@@ -1,0 +1,10 @@
+export default {
+  1: "Smileys & People",
+  2: "Animals & Nature",
+  3: "Food & Drink",
+  4: "Travel & Places",
+  5: "Activities",
+  6: "Objects",
+  7: "Symbols",
+  8: "Flags"
+};

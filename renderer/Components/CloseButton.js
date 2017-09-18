@@ -8,11 +8,11 @@ class CloseButton extends Component {
   }
   render() {
     return (
-        <button
-          id="close-button"
-          onClick={this.closeWindow.bind(this)}
-          className="delete is-small button is-danger"
-        />
+      <button
+        id="close-button"
+        onClick={this.closeWindow.bind(this)}
+        className="delete is-small button is-danger"
+      />
     );
   }
 }

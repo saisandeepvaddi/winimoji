@@ -5,16 +5,27 @@ const path = require("path");
 
 const inputFilePath = path.resolve(__dirname, "..", "data", "emoji-test.txt");
 const outputFilePath = path.resolve(__dirname, "..", "data", "emojis.json");
+const pureEmojiOutput = path.resolve(
+  __dirname,
+  "..",
+  "data",
+  "pure-emojis.json"
+);
 
 let data = [];
 
 // Create output file if doesn't exist
 
 fs.closeSync(fs.openSync(outputFilePath, "w"));
+fs.closeSync(fs.openSync(pureEmojiOutput, "w"));
 const inputStream = fs.createReadStream(inputFilePath, {
   encoding: "utf-8"
 });
 const outputStream = fs.createWriteStream(outputFilePath, {
+  encoding: "utf-8"
+});
+
+const pureEMojiOutputStream = fs.createWriteStream(pureEmojiOutput, {
   encoding: "utf-8"
 });
 
@@ -51,10 +62,14 @@ const checkEmojiRegExp = new RegExp("(.*);.*#\\s*([^\\s]+)\\s*(.*)", "i");
 let group, subgroup, emoji;
 let id = 1;
 
+let k = 1;
+let pureEmojis = [];
+
 rl.on("line", line => {
   if ((group = line.match(checkGroupRegExp)) !== null) {
     const groupName = group[1];
     currentGroup = groupName;
+    console.log(` ${k++} : ${currentGroup}`);
     if (!data.hasOwnProperty(currentGroup)) {
       data = {
         ...data,
@@ -77,6 +92,7 @@ rl.on("line", line => {
     }
   } else if ((emoji = line.match(checkEmojiRegExp)) !== null) {
     const emojiObj = createEmoji(emoji);
+    pureEmojis = [...pureEmojis, emojiObj];
     if (currentGroup && currentSubgroup) {
       data = {
         ...data,
@@ -94,5 +110,6 @@ rl.on("line", line => {
 
 rl.on("close", () => {
   outputStream.write(JSON.stringify(data, null, 2));
+  pureEMojiOutputStream.write(JSON.stringify(pureEmojis, null, 2));
   console.log("Finished");
 });
