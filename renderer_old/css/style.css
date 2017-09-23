@@ -1,0 +1,31 @@
+body,
+html {
+  /*height: 100%;
+    width: 100%;*/
+  -webkit-app-region: drag;
+}
+html {
+  overflow-y: auto;
+}
+
+#emoji,
+#searchbox,
+#hotkey_form {
+  -webkit-app-region: no-drag;
+}
+
+#searchbox-container {
+  margin: 5px 0px 0px 5px;
+}
+
+#close-button {
+  -webkit-app-region: no-drag;
+  margin-top: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#draggable {
+  margin-top: 5px;
+  margin-right: 5px;
+}

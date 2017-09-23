@@ -10,7 +10,8 @@ html {
 
 #emoji,
 #searchbox,
-#hotkey_form {
+#hotkey_form,
+.category-bar {
   -webkit-app-region: no-drag;
 }
 

@@ -9,11 +9,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var fs = require("fs");
 var readline = require("readline");
 var path = require("path");
-// const _ = require("lodash");
+var _ = require("lodash");
 
 var inputFilePath = path.resolve(__dirname, "..", "data", "emoji-test.txt");
 var outputFilePath = path.resolve(__dirname, "..", "data", "emojis.json");
 var pureEmojiOutput = path.resolve(__dirname, "..", "data", "pure-emojis.json");
+
+var groupEmojiOutput = path.resolve(__dirname, "..", "data", "group-emojis.json");
 
 var data = [];
 
@@ -21,6 +23,7 @@ var data = [];
 
 fs.closeSync(fs.openSync(outputFilePath, "w"));
 fs.closeSync(fs.openSync(pureEmojiOutput, "w"));
+fs.closeSync(fs.openSync(groupEmojiOutput, "w"));
 var inputStream = fs.createReadStream(inputFilePath, {
   encoding: "utf-8"
 });
@@ -29,6 +32,10 @@ var outputStream = fs.createWriteStream(outputFilePath, {
 });
 
 var pureEMojiOutputStream = fs.createWriteStream(pureEmojiOutput, {
+  encoding: "utf-8"
+});
+
+var groupEmojiOutputStream = fs.createWriteStream(groupEmojiOutput, {
   encoding: "utf-8"
 });
 
@@ -71,6 +78,11 @@ var id = 1;
 
 var k = 1;
 var pureEmojis = [];
+var groupEmojis = {};
+var currentGroupEmojis = [];
+
+var p = 0;
+var prevGroupName = "";
 
 rl.on("line", function (line) {
   if ((group = line.match(checkGroupRegExp)) !== null) {
@@ -91,14 +103,44 @@ rl.on("line", function (line) {
   } else if ((emoji = line.match(checkEmojiRegExp)) !== null) {
     var emojiObj = createEmoji(emoji);
     pureEmojis = [].concat(_toConsumableArray(pureEmojis), [emojiObj]);
+    groupEmojis = _extends({}, groupEmojis, _defineProperty({}, currentGroup, _extends({}, groupEmojis[currentGroup], _defineProperty({}, emojiObj.unicode, emojiObj))));
     if (currentGroup && currentSubgroup) {
       data = _extends({}, data, _defineProperty({}, currentGroup, _extends({}, data[currentGroup], _defineProperty({}, currentSubgroup, _extends({}, data[currentGroup][currentSubgroup], _defineProperty({}, emojiObj.unicode, emojiObj))))));
     }
   }
 });
 
+var categories = {
+  "1": "Smileys & People",
+  "2": "Animals & Nature",
+  "3": "Food & Drink",
+  "4": "Travel & Places",
+  "5": "Activities",
+  "6": "Objects",
+  "7": "Symbols",
+  "8": "Flags"
+};
+
+var createGroupedEmojis = function createGroupedEmojis() {
+  currentGroupEmojis = [];
+  _.forEach(categories, function (category) {
+    // const realCategory = categories[category];
+    // console.log(category);
+
+    var emojisWithCategory = data[category];
+    var emojisRequired = _.map(emojisWithCategory, function (emojis) {
+      return _.map(emojis, function (e) {
+        return e;
+      });
+    });
+    currentGroupEmojis = _extends({}, currentGroupEmojis, _defineProperty({}, category, _.flattenDeep(emojisRequired)));
+  });
+};
+
 rl.on("close", function () {
   outputStream.write(JSON.stringify(data, null, 2));
   pureEMojiOutputStream.write(JSON.stringify(pureEmojis, null, 2));
+  createGroupedEmojis();
+  groupEmojiOutputStream.write(JSON.stringify(currentGroupEmojis, null, 2));
   console.log("Finished");
 });

@@ -8,6 +8,7 @@ module.exports = {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "renderer")
   },
+  devtool: "eval-source-map",
   module: {
     rules: [
       {
@@ -17,7 +18,7 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["env", "stage-3", "react"]
+            presets: ["env", "react", "stage-3"]
           }
         }
       }
@@ -34,7 +35,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       "process.env": {
-        NODE_ENV: JSON.stringify("production")
+        NODE_ENV: JSON.stringify("development")
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
@@ -43,7 +44,7 @@ module.exports = {
       }
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "renderer", "dummy.html")
+      template: path.resolve(__dirname, "renderer", "for_webpack", "index.html")
     })
   ],
   watch: true

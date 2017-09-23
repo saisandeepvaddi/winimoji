@@ -1,27 +1,43 @@
-import { GET_ALL_EMOJIS, GET_SEARCHED_EMOJIS } from "../constants";
-import { setupInitialEmojis, getEmojisForCategory } from "../actions";
+import {
+  getAllEmojis,
+  getEmojisForCategory,
+  getEmojisForCategoryNumber
+} from "../actions";
+import {
+  GET_ALL_EMOJIS,
+  GET_CATEGORY_EMOJIS,
+  GET_EMOJIS_FOR_SEARCH,
+  GET_INITIAL_STATE
+} from "../constants";
 
 const INITIAL_STATE = {
-  allEmojis: setupInitialEmojis(),
-  1: getEmojisForCategory(1),
-  2: getEmojisForCategory(2),
-  3: getEmojisForCategory(3),
-  4: getEmojisForCategory(4),
-  5: getEmojisForCategory(5),
-  6: getEmojisForCategory(6),
-  7: getEmojisForCategory(7),
-  8: getEmojisForCategory(8)
+  emojis: getEmojisForCategoryNumber(1),
+  favorite: {},
+  categoryBar: true,
+  searchedEmojis: []
 };
 
-export default (state = INITIAL_STATE, action) => {
+const rootReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
+    case GET_EMOJIS_FOR_SEARCH:
+      return {
+        ...state,
+        categoryBar: false,
+        emojis: action.payload
+      };
     case GET_ALL_EMOJIS:
-      return { ...state, emojis: action.payload };
-
-    case GET_SEARCHED_EMOJIS:
-      return { ...state, emojis: action.payload };
-
+      return state;
+    case GET_INITIAL_STATE:
+      return INITIAL_STATE;
+    case GET_CATEGORY_EMOJIS:
+      return {
+        ...state,
+        categoryBar: true,
+        emojis: action.payload
+      };
     default:
       return state;
   }
 };
+
+export default rootReducer;

@@ -5,13 +5,13 @@
   "main": "main.js",
   "scripts": {
     "test": "jest --watch",
-    "webpack": "webpack",
+    "webpack": "webpack --config webpack.config.js --optimize-minimize",
     "electron": "electron .",
     "pack": "build --dir",
     "dist": "build",
     "make-unicodes": "node ./utilities/unicodeUtils.js",
     "make-emojis-babel": "babel --no-babelrc ./utilities/emojiBuilderWithSpread.js --out-file ./utilities/emojiBuilder.js --presets=env,stage-3",
-    "make-emojis": "node ./utilities/emojiBuilder.js"
+    "make-emojis": "npm run make-emojis-babel && node ./utilities/emojiBuilder.js"
   },
   "build": {
     "appId": "com.saisandeepvaddi.winimoji",
