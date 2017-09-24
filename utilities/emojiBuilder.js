@@ -102,6 +102,9 @@ rl.on("line", function (line) {
     }
   } else if ((emoji = line.match(checkEmojiRegExp)) !== null) {
     var emojiObj = createEmoji(emoji);
+    if (emojiObj.emoji.includes("🤩") || emojiObj.emoji.includes("🤨") || emojiObj.name.includes("skin tone")) {
+      return;
+    }
     pureEmojis = [].concat(_toConsumableArray(pureEmojis), [emojiObj]);
     groupEmojis = _extends({}, groupEmojis, _defineProperty({}, currentGroup, _extends({}, groupEmojis[currentGroup], _defineProperty({}, emojiObj.unicode, emojiObj))));
     if (currentGroup && currentSubgroup) {
@@ -124,9 +127,6 @@ var categories = {
 var createGroupedEmojis = function createGroupedEmojis() {
   currentGroupEmojis = [];
   _.forEach(categories, function (category) {
-    // const realCategory = categories[category];
-    // console.log(category);
-
     var emojisWithCategory = data[category];
     var emojisRequired = _.map(emojisWithCategory, function (emojis) {
       return _.map(emojis, function (e) {

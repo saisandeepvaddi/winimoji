@@ -2,10 +2,15 @@ body,
 html {
   /*height: 100%;
     width: 100%;*/
-  -webkit-app-region: drag;
+  -webkit-app-region: no-drag;
+  -webkit-user-select: none;
 }
 html {
   overflow-y: auto;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
 }
 
 #emoji,
@@ -15,7 +20,11 @@ html {
   -webkit-app-region: no-drag;
 }
 
-#searchbox-container {
+.emoji-container {
+  margin-right: 80px;
+}
+
+/* #searchbox-container {
   margin: 5px 0px 0px 5px;
 }
 
@@ -29,4 +38,4 @@ html {
 #draggable {
   margin-top: 5px;
   margin-right: 5px;
-}
+} */

@@ -2,28 +2,30 @@ import React, { Component } from "react";
 import debounce from "lodash/debounce";
 import { getEmojisForSearchTerm, getInitialState } from "../actions";
 import { connect } from "react-redux";
+import { Input } from "semantic-ui-react";
 
 class SearchBar extends Component {
-  searchEmoji() {
-    const searchTerm = this.emojiSearchInputElement.value;
-    if (searchTerm === "") {
+  searchEmoji(e, { value }) {
+    if (value === "") {
       this.props.getInitialState();
     } else {
-      this.props.getEmojisForSearchTerm(searchTerm.toLowerCase());
+      this.props.getEmojisForSearchTerm(value.toLowerCase());
     }
   }
+
   render() {
     return (
-      <input
-        id="searchbox"
+      <Input
         type="text"
-        ref={input => (this.emojiSearchInputElement = input)}
-        placeholder="Search Winimoji"
+        icon="search"
+        tabIndex={1}
+        fluid={true}
+        placeholder="Search Winimoji..."
         onChange={debounce(this.searchEmoji.bind(this), 150, {
           leading: false,
           trailing: true
         })}
-        className="input"
+        className="no-drag"
       />
     );
   }

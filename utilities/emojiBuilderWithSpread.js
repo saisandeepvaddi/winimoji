@@ -109,6 +109,13 @@ rl.on("line", line => {
     }
   } else if ((emoji = line.match(checkEmojiRegExp)) !== null) {
     const emojiObj = createEmoji(emoji);
+    if (
+      emojiObj.emoji.includes("🤩") ||
+      emojiObj.emoji.includes("🤨") ||
+      emojiObj.name.includes("skin tone")
+    ) {
+      return;
+    }
     pureEmojis = [...pureEmojis, emojiObj];
     groupEmojis = {
       ...groupEmojis,

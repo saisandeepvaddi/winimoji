@@ -1,15 +1,20 @@
 import React from "react";
 import { connect } from "react-redux";
 import Emoji from "./Emoji";
+import { Grid } from "semantic-ui-react";
 
 const EmojiPad = ({ emojis }) => {
   const emojisToDisplay = emojis.map((emoji, i) => {
-    return <Emoji key={i} name={emoji.name} emoji={emoji.emoji} />;
+    return (
+      <Grid.Column key={i} width={1}>
+        <Emoji name={emoji.name} emoji={emoji.emoji} />
+      </Grid.Column>
+    );
   });
   return (
-    <div id="searchbox-container" className="field is-grouped">
+    <Grid columns="equal" relaxed>
       {emojisToDisplay}
-    </div>
+    </Grid>
   );
 };
 

@@ -1,26 +1,30 @@
 import React from "react";
 const electron = require("electron");
 const { clipboard } = electron;
+import { Container, Button } from "semantic-ui-react";
 
 const Emoji = ({ name, emoji }) => {
   const copyEmojiToClipBoard = e => {
-    e.preventDefault();
     clipboard.write({
-      text: e.target.value
+      text: emoji
     });
   };
 
   return (
-    <div>
+    <Container>
       <abbr title={name}>
-        <input
+        <Button
           id="emoji"
-          type="button"
-          value={emoji}
+          compact
+          basic
+          size="medium"
           onClick={copyEmojiToClipBoard}
-        />
+          className="emoji-container"
+        >
+          {emoji}
+        </Button>
       </abbr>
-    </div>
+    </Container>
   );
 };
 
