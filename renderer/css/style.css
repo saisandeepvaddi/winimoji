@@ -8,6 +8,7 @@ html {
 
 body {
   overflow: hidden;
+  padding-bottom: 10px;
 }
 
 * {
@@ -25,6 +26,7 @@ body {
 
 .base-class {
   padding: 10px;
+  margin-right: 10px;
 }
 
 .app-container {
@@ -32,6 +34,7 @@ body {
   height: 100%;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 
 .searchbar-container {
@@ -81,8 +84,13 @@ body {
 .emoji-grid-container {
   overflow-y: scroll !important;
   height: 100vh;
-  margin-right: 10px;
+  margin: 10px;
   padding: 10px;
+}
+
+.emojipad-container {
+  display: block;
+  bottom: 10px;
 }
 
 .emoji-button,
@@ -103,5 +111,10 @@ body {
 }
 
 .category-button:hover {
-  background-color: #e5eafa;
+  /* background-color: #e5eafa; */
+  background-color: #c23cb0;
+}
+
+.current-category {
+  background-color: #c23cb0;
 }

@@ -14,7 +14,7 @@ const INITIAL_STATE = {
   emojis: getEmojisForCategoryNumber(1),
   favorite: {},
   categoryBar: true,
-  searchedEmojis: []
+  selectedCategory: 1
 };
 
 const rootReducer = (state = INITIAL_STATE, action) => {
@@ -33,7 +33,8 @@ const rootReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         categoryBar: true,
-        emojis: action.payload
+        emojis: action.payload,
+        selectedCategory: action.categoryId
       };
     default:
       return state;

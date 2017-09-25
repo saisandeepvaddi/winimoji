@@ -4,6 +4,7 @@ import SearchBar from "./SearchBar";
 import CategoryBar from "./CategoryBar";
 import EmojiPad from "./EmojiPad";
 import CloseButton from "./CloseButton";
+import Divider from "./Divider";
 
 const BaseContainer = ({ categoryBar }) => {
   return (
@@ -15,6 +16,7 @@ const BaseContainer = ({ categoryBar }) => {
       <div className="categorybar-container no-drag">
         {categoryBar ? <CategoryBar /> : <span />}
       </div>
+      <Divider />
       <div className="emojipad-container no-drag">
         <EmojiPad />
       </div>

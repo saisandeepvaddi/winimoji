@@ -6,12 +6,12 @@ exports.window;
 
 exports.createWindow = () => {
   this.window = new BrowserWindow({
-    width: 500,
-    height: 300,
-    minWidth: 500,
-    minHeight: 300,
-    // maxWidth: 600,
-    // maxHeight: 400,
+    width: 600,
+    height: 450,
+    minWidth: 600,
+    minHeight: 450,
+    maxWidth: 800,
+    maxHeight: 600,
     frame: false,
     show: false,
     maximizable: false,

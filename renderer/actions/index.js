@@ -28,6 +28,7 @@ export const getEmojisForCategory = category => {
 
   return {
     type: GET_CATEGORY_EMOJIS,
+    categoryId: category,
     payload: emojisWithCategory
   };
 };

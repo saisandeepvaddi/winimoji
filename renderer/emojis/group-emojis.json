@@ -384,12 +384,6 @@
       "emoji": "🤥",
       "name": "lying face"
     },
-
-    {
-      "unicode": "1F9D0",
-      "emoji": "🧐",
-      "name": "face with monocle"
-    },
     {
       "unicode": "1F913",
       "emoji": "🤓",
@@ -965,12 +959,6 @@
       "emoji": "🤶",
       "name": "Mrs. Claus"
     },
-    {
-      "unicode": "1F9D9",
-      "emoji": "🧙",
-      "name": "mage"
-    },
-
     {
       "unicode": "1F64D",
       "emoji": "🙍",
@@ -2192,11 +2180,6 @@
       "name": "raising hands"
     },
     {
-      "unicode": "1F932",
-      "emoji": "🤲",
-      "name": "palms up together"
-    },
-    {
       "unicode": "1F64F",
       "emoji": "🙏",
       "name": "folded hands"
@@ -2337,11 +2320,6 @@
       "name": "yellow heart"
     },
     {
-      "unicode": "1F9E1",
-      "emoji": "🧡",
-      "name": "orange heart"
-    },
-    {
       "unicode": "1F49C",
       "emoji": "💜",
       "name": "purple heart"
@@ -2480,11 +2458,6 @@
       "unicode": "1F456",
       "emoji": "👖",
       "name": "jeans"
-    },
-    {
-      "unicode": "1F9E3",
-      "emoji": "🧣",
-      "name": "scarf"
     },
     {
       "unicode": "1F457",
@@ -2699,11 +2672,6 @@
       "name": "unicorn face"
     },
     {
-      "unicode": "1F993",
-      "emoji": "🦓",
-      "name": "zebra"
-    },
-    {
       "unicode": "1F98C",
       "emoji": "🦌",
       "name": "deer"
@@ -2774,11 +2742,6 @@
       "name": "two-hump camel"
     },
     {
-      "unicode": "1F992",
-      "emoji": "🦒",
-      "name": "giraffe"
-    },
-    {
       "unicode": "1F418",
       "emoji": "🐘",
       "name": "elephant"
@@ -2827,11 +2790,6 @@
       "unicode": "1F43F",
       "emoji": "🐿",
       "name": "chipmunk"
-    },
-    {
-      "unicode": "1F994",
-      "emoji": "🦔",
-      "name": "hedgehog"
     },
     {
       "unicode": "1F987",
@@ -4391,11 +4349,6 @@
       "unicode": "1F680",
       "emoji": "🚀",
       "name": "rocket"
-    },
-    {
-      "unicode": "1F6F8",
-      "emoji": "🛸",
-      "name": "flying saucer"
     },
     {
       "unicode": "1F6CE FE0F",
