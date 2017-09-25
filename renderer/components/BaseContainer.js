@@ -3,19 +3,22 @@ import { connect } from "react-redux";
 import SearchBar from "./SearchBar";
 import CategoryBar from "./CategoryBar";
 import EmojiPad from "./EmojiPad";
-import { Container } from "semantic-ui-react";
+import CloseButton from "./CloseButton";
 
 const BaseContainer = ({ categoryBar }) => {
   return (
-    <Container>
-      <Container>
+    <div className="app-container">
+      <div className="searchbar-container">
         <SearchBar />
-      </Container>
-      <Container>{categoryBar ? <CategoryBar /> : <span />}</Container>
-      <Container>
+        <CloseButton />
+      </div>
+      <div className="categorybar-container no-drag">
+        {categoryBar ? <CategoryBar /> : <span />}
+      </div>
+      <div className="emojipad-container no-drag">
         <EmojiPad />
-      </Container>
-    </Container>
+      </div>
+    </div>
   );
 };
 

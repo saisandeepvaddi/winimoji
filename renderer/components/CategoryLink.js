@@ -1,16 +1,15 @@
 import React from "react";
-import { Button } from "semantic-ui-react";
 
 const CategoryLink = ({ categoryId, categoryLogo, onClickListener }) => {
   return (
-    <Button
-      color="green"
+    <button
+      className="category-button"
       onClick={() => {
         onClickListener(categoryId);
       }}
     >
       {categoryLogo}
-    </Button>
+    </button>
   );
 };
 

@@ -1,21 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
 import Emoji from "./Emoji";
-import { Grid } from "semantic-ui-react";
+import EmojiGrid from "./EmojiGrid";
 
 const EmojiPad = ({ emojis }) => {
   const emojisToDisplay = emojis.map((emoji, i) => {
-    return (
-      <Grid.Column key={i} width={1}>
-        <Emoji name={emoji.name} emoji={emoji.emoji} />
-      </Grid.Column>
-    );
+    return <Emoji key={i} name={emoji.name} emoji={emoji.emoji} />;
   });
-  return (
-    <Grid columns="equal" relaxed>
-      {emojisToDisplay}
-    </Grid>
-  );
+  return <EmojiGrid>{emojisToDisplay}</EmojiGrid>;
 };
 
 const mapStateToProps = state => {

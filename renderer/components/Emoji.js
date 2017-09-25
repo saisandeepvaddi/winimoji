@@ -1,7 +1,6 @@
 import React from "react";
 const electron = require("electron");
 const { clipboard } = electron;
-import { Container, Button } from "semantic-ui-react";
 
 const Emoji = ({ name, emoji }) => {
   const copyEmojiToClipBoard = e => {
@@ -11,20 +10,17 @@ const Emoji = ({ name, emoji }) => {
   };
 
   return (
-    <Container>
+    <div className="emoji">
       <abbr title={name}>
-        <Button
-          id="emoji"
-          compact
-          basic
-          size="medium"
+        <button
           onClick={copyEmojiToClipBoard}
-          className="emoji-container"
+          className="emoji-button"
+          role="button"
         >
           {emoji}
-        </Button>
+        </button>
       </abbr>
-    </Container>
+    </div>
   );
 };
 

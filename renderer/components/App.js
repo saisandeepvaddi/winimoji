@@ -1,12 +1,11 @@
 import React from "react";
 import BaseContainer from "./BaseContainer";
-import { Container } from "semantic-ui-react";
 
 const App = () => {
   return (
-    <Container>
+    <div className="base-class">
       <BaseContainer />
-    </Container>
+    </div>
   );
 };
 
