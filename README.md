@@ -1,5 +1,9 @@
 # Winimoji
 
+# NOTE
+
+Huge Update is coming in a day. Stay Tuned.
+
 ## Emoji picker for Windows
 
 Search :point_right: Click :point_right: Paste Anywhere :sunglasses:
