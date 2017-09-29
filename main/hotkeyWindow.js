@@ -20,7 +20,13 @@ exports.createHotkeyWindow = () => {
 
   this.hotkeyWindow.loadURL(
     url.format({
-      pathname: path.join(__dirname, "..", "renderer", "hotkey.html"),
+      pathname: path.join(
+        __dirname,
+        "..",
+        "renderer",
+        "taskbar",
+        "hotkey.html"
+      ),
       protocol: "file:",
       slashes: true
     })

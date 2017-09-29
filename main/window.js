@@ -6,15 +6,15 @@ exports.window;
 
 exports.createWindow = () => {
   this.window = new BrowserWindow({
-    width: 500,
-    height: 300,
-    minWidth: 500,
-    minHeight: 300,
+    width: 600,
+    height: 450,
+    minWidth: 600,
+    minHeight: 450,
     maxWidth: 600,
-    maxHeight: 400,
-    frame: false,
-    show: false,
+    maxHeight: 450,
     maximizable: false,
+    // frame: false,
+    show: false,
     icon: path.resolve(__dirname, "..", "icons", "icon.png")
   });
 
@@ -25,6 +25,8 @@ exports.createWindow = () => {
       slashes: true
     })
   );
+
+  this.window.setMenu(null);
 
   // this.window.openDevTools();
 

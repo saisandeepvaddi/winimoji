@@ -1,13 +1,16 @@
 const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
   entry: path.resolve(__dirname, "renderer", "renderer.js"),
   output: {
     filename: "[name].bundle.js",
+    chunkFilename: "[name].bundle.js",
     path: path.resolve(__dirname, "renderer")
   },
+  // devtool: "eval-source-map",
   module: {
     rules: [
       {
@@ -17,9 +20,13 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            presets: ["env", "stage-3", "react"]
+            presets: ["env", "react", "stage-3"]
           }
         }
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
       }
     ]
   },
@@ -37,14 +44,11 @@ module.exports = {
         NODE_ENV: JSON.stringify("production")
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        warnings: false
-      }
+    new UglifyJSPlugin({
+      parallel: true
     }),
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "renderer", "dummy.html")
+      template: path.resolve(__dirname, "renderer", "for_webpack", "index.html")
     })
-  ],
-  watch: true
+  ]
 };

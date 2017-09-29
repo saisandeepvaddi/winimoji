@@ -1,20 +1,43 @@
 const fs = require("fs");
 const readline = require("readline");
 const path = require("path");
-// const _ = require("lodash");
+const _ = require("lodash");
 
 const inputFilePath = path.resolve(__dirname, "..", "data", "emoji-test.txt");
 const outputFilePath = path.resolve(__dirname, "..", "data", "emojis.json");
+const pureEmojiOutput = path.resolve(
+  __dirname,
+  "..",
+  "data",
+  "pure-emojis.json"
+);
+
+const groupEmojiOutput = path.resolve(
+  __dirname,
+  "..",
+  "data",
+  "group-emojis.json"
+);
 
 let data = [];
 
 // Create output file if doesn't exist
 
 fs.closeSync(fs.openSync(outputFilePath, "w"));
+fs.closeSync(fs.openSync(pureEmojiOutput, "w"));
+fs.closeSync(fs.openSync(groupEmojiOutput, "w"));
 const inputStream = fs.createReadStream(inputFilePath, {
   encoding: "utf-8"
 });
 const outputStream = fs.createWriteStream(outputFilePath, {
+  encoding: "utf-8"
+});
+
+const pureEMojiOutputStream = fs.createWriteStream(pureEmojiOutput, {
+  encoding: "utf-8"
+});
+
+const groupEmojiOutputStream = fs.createWriteStream(groupEmojiOutput, {
   encoding: "utf-8"
 });
 
@@ -51,10 +74,19 @@ const checkEmojiRegExp = new RegExp("(.*);.*#\\s*([^\\s]+)\\s*(.*)", "i");
 let group, subgroup, emoji;
 let id = 1;
 
+let k = 1;
+let pureEmojis = [];
+let groupEmojis = {};
+let currentGroupEmojis = [];
+
+let p = 0;
+let prevGroupName = "";
+
 rl.on("line", line => {
   if ((group = line.match(checkGroupRegExp)) !== null) {
     const groupName = group[1];
     currentGroup = groupName;
+    console.log(` ${k++} : ${currentGroup}`);
     if (!data.hasOwnProperty(currentGroup)) {
       data = {
         ...data,
@@ -77,6 +109,21 @@ rl.on("line", line => {
     }
   } else if ((emoji = line.match(checkEmojiRegExp)) !== null) {
     const emojiObj = createEmoji(emoji);
+    if (
+      emojiObj.emoji.includes("🤩") ||
+      emojiObj.emoji.includes("🤨") ||
+      emojiObj.name.includes("skin tone")
+    ) {
+      return;
+    }
+    pureEmojis = [...pureEmojis, emojiObj];
+    groupEmojis = {
+      ...groupEmojis,
+      [currentGroup]: {
+        ...groupEmojis[currentGroup],
+        [emojiObj.unicode]: emojiObj
+      }
+    };
     if (currentGroup && currentSubgroup) {
       data = {
         ...data,
@@ -92,7 +139,35 @@ rl.on("line", line => {
   }
 });
 
+const categories = {
+  "1": "Smileys & People",
+  "2": "Animals & Nature",
+  "3": "Food & Drink",
+  "4": "Travel & Places",
+  "5": "Activities",
+  "6": "Objects",
+  "7": "Symbols",
+  "8": "Flags"
+};
+
+const createGroupedEmojis = () => {
+  currentGroupEmojis = [];
+  _.forEach(categories, category => {
+    const emojisWithCategory = data[category];
+    const emojisRequired = _.map(emojisWithCategory, emojis => {
+      return _.map(emojis, e => e);
+    });
+    currentGroupEmojis = {
+      ...currentGroupEmojis,
+      [category]: _.flattenDeep(emojisRequired)
+    };
+  });
+};
+
 rl.on("close", () => {
   outputStream.write(JSON.stringify(data, null, 2));
+  pureEMojiOutputStream.write(JSON.stringify(pureEmojis, null, 2));
+  createGroupedEmojis();
+  groupEmojiOutputStream.write(JSON.stringify(currentGroupEmojis, null, 2));
   console.log("Finished");
 });
