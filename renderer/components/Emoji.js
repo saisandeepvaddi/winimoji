@@ -5,6 +5,7 @@ import debounce from "lodash/debounce";
 
 const Emoji = ({ name, emoji }) => {
   const copyEmojiToClipBoard = e => {
+    clipboard.clear();
     clipboard.write({
       text: emoji
     });
