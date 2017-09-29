@@ -10,11 +10,11 @@ exports.createWindow = () => {
     height: 450,
     minWidth: 600,
     minHeight: 450,
-    maxWidth: 800,
-    maxHeight: 600,
-    frame: false,
-    show: false,
+    maxWidth: 600,
+    maxHeight: 450,
     maximizable: false,
+    // frame: false,
+    show: false,
     icon: path.resolve(__dirname, "..", "icons", "icon.png")
   });
 
@@ -26,7 +26,9 @@ exports.createWindow = () => {
     })
   );
 
-  // this.window.openDevTools();
+  this.window.setMenu(null);
+
+  this.window.openDevTools();
 
   this.window.on("closed", function() {
     this.window = null;

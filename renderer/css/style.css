@@ -1,19 +1,16 @@
-body,
-html {
-  height: 100%;
-  width: 100%;
-  -webkit-app-region: drag;
-  -webkit-user-select: none;
-}
-
-body {
-  overflow: hidden;
-  padding-bottom: 10px;
-}
-
+/* Layout Start */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   outline: none;
+  overflow: hidden;
+}
+
+html,
+body {
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
 }
 
 .no-select {
@@ -24,80 +21,73 @@ body {
   -webkit-app-region: no-drag;
 }
 
-.base-class {
-  padding: 10px;
-  margin-right: 10px;
-}
-
 .app-container {
   display: flex;
-  height: 100%;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 10px;
 }
 
 .searchbar-container {
+  /* height: 40px; */
+  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 .searchbox-input {
+  height: 40px;
   width: 100%;
-}
-
-.searchbox-input:focus {
-  border-style: inset;
-}
-
-.close-button {
-  margin: 10px;
-  border: none;
-  background-color: red;
-  color: white;
-}
-
-.close-button:hover {
-  opacity: 0.5;
 }
 
 .emoji-grid-container,
 .category-bar {
   display: grid;
   grid-column-gap: 15px;
-  grid-row-gap: 15px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-auto-rows: auto;
-}
-
-.category-bar {
-  margin: 20px;
-  padding: 10px;
-}
-
-.emoji {
-  display: inline-block;
-  height: 50px;
-  width: 50px;
-}
-.emoji-grid-container {
-  overflow-y: scroll !important;
-  height: 100vh;
-  margin: 10px;
   padding: 10px;
 }
 
 .emojipad-container {
-  display: block;
-  bottom: 10px;
+  height: 280px;
+  margin-left: 20px;
+}
+
+.emojipad-container-no-category {
+  height: 330px;
+  margin-left: 20px;
+}
+
+.emoji-grid-container {
+  height: 100%;
+  overflow: auto;
+}
+
+.emoji {
+  display: inline-block;
+  margin: 1px;
+  padding: 2px;
+  height: 50px;
+  width: 50px;
+}
+
+/* Lay Out End */
+
+/* Styling Elements Start */
+
+.searchbox-input:focus {
+  color: #212121;
+  /* border: 2px solid #27ae60; */
+  outline: 1px solid #27ae60;
+  font-size: 15px;
 }
 
 .emoji-button,
 .category-button {
   margin: 1px;
   border: none;
-  font-size: 23px;
+  font-size: 20px;
   background-color: transparent;
   text-align: center;
 }
@@ -107,14 +97,16 @@ body {
 }
 
 .emoji-button:active {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
 }
 
 .category-button:hover {
-  /* background-color: #e5eafa; */
-  background-color: #c23cb0;
+  /* background-color: #c23cb0; */
+  background-color: #27ae60;
 }
 
 .current-category {
-  background-color: #c23cb0;
+  background-color: #27ae60;
 }
+
+/* Styling Elements End */

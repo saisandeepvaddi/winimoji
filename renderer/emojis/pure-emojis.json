@@ -1,10 +1,5 @@
 [
   {
-    "unicode": "#   Code points",
-    "emoji": "emoji",
-    "name": "name"
-  },
-  {
     "unicode": "1F600",
     "emoji": "😀",
     "name": "grinning face"
@@ -305,11 +300,6 @@
     "name": "weary face"
   },
   {
-    "unicode": "1F92F",
-    "emoji": "🤯",
-    "name": "exploding head"
-  },
-  {
     "unicode": "1F62C",
     "emoji": "😬",
     "name": "grimacing face"
@@ -330,11 +320,6 @@
     "name": "flushed face"
   },
   {
-    "unicode": "1F92A",
-    "emoji": "🤪",
-    "name": "crazy face"
-  },
-  {
     "unicode": "1F635",
     "emoji": "😵",
     "name": "dizzy face"
@@ -348,11 +333,6 @@
     "unicode": "1F620",
     "emoji": "😠",
     "name": "angry face"
-  },
-  {
-    "unicode": "1F92C",
-    "emoji": "🤬",
-    "name": "face with symbols on mouth"
   },
   {
     "unicode": "1F637",
@@ -373,11 +353,6 @@
     "unicode": "1F922",
     "emoji": "🤢",
     "name": "nauseated face"
-  },
-  {
-    "unicode": "1F92E",
-    "emoji": "🤮",
-    "name": "face vomiting"
   },
   {
     "unicode": "1F927",
@@ -403,21 +378,6 @@
     "unicode": "1F925",
     "emoji": "🤥",
     "name": "lying face"
-  },
-  {
-    "unicode": "1F92B",
-    "emoji": "🤫",
-    "name": "shushing face"
-  },
-  {
-    "unicode": "1F92D",
-    "emoji": "🤭",
-    "name": "face with hand over mouth"
-  },
-  {
-    "unicode": "1F9D0",
-    "emoji": "🧐",
-    "name": "face with monocle"
   },
   {
     "unicode": "1F913",
@@ -550,11 +510,6 @@
     "name": "baby"
   },
   {
-    "unicode": "1F9D2",
-    "emoji": "🧒",
-    "name": "child"
-  },
-  {
     "unicode": "1F466",
     "emoji": "👦",
     "name": "boy"
@@ -565,11 +520,6 @@
     "name": "girl"
   },
   {
-    "unicode": "1F9D1",
-    "emoji": "🧑",
-    "name": "adult"
-  },
-  {
     "unicode": "1F468",
     "emoji": "👨",
     "name": "man"
@@ -578,11 +528,6 @@
     "unicode": "1F469",
     "emoji": "👩",
     "name": "woman"
-  },
-  {
-    "unicode": "1F9D3",
-    "emoji": "🧓",
-    "name": "older adult"
   },
   {
     "unicode": "1F474",
@@ -950,16 +895,6 @@
     "name": "man with Chinese cap"
   },
   {
-    "unicode": "1F9D5",
-    "emoji": "🧕",
-    "name": "woman with headscarf"
-  },
-  {
-    "unicode": "1F9D4",
-    "emoji": "🧔",
-    "name": "bearded person"
-  },
-  {
     "unicode": "1F471",
     "emoji": "👱",
     "name": "blond-haired person"
@@ -1000,11 +935,6 @@
     "name": "pregnant woman"
   },
   {
-    "unicode": "1F931",
-    "emoji": "🤱",
-    "name": "breast-feeding"
-  },
-  {
     "unicode": "1F47C",
     "emoji": "👼",
     "name": "baby angel"
@@ -1018,181 +948,6 @@
     "unicode": "1F936",
     "emoji": "🤶",
     "name": "Mrs. Claus"
-  },
-  {
-    "unicode": "1F9D9",
-    "emoji": "🧙",
-    "name": "mage"
-  },
-  {
-    "unicode": "1F9D9 200D 2640 FE0F",
-    "emoji": "🧙‍♀️",
-    "name": "woman mage"
-  },
-  {
-    "unicode": "1F9D9 200D 2640",
-    "emoji": "🧙‍♀",
-    "name": "woman mage"
-  },
-  {
-    "unicode": "1F9D9 200D 2642 FE0F",
-    "emoji": "🧙‍♂️",
-    "name": "man mage"
-  },
-  {
-    "unicode": "1F9D9 200D 2642",
-    "emoji": "🧙‍♂",
-    "name": "man mage"
-  },
-  {
-    "unicode": "1F9DA",
-    "emoji": "🧚",
-    "name": "fairy"
-  },
-  {
-    "unicode": "1F9DA 200D 2640 FE0F",
-    "emoji": "🧚‍♀️",
-    "name": "woman fairy"
-  },
-  {
-    "unicode": "1F9DA 200D 2640",
-    "emoji": "🧚‍♀",
-    "name": "woman fairy"
-  },
-  {
-    "unicode": "1F9DA 200D 2642 FE0F",
-    "emoji": "🧚‍♂️",
-    "name": "man fairy"
-  },
-  {
-    "unicode": "1F9DA 200D 2642",
-    "emoji": "🧚‍♂",
-    "name": "man fairy"
-  },
-  {
-    "unicode": "1F9DB",
-    "emoji": "🧛",
-    "name": "vampire"
-  },
-  {
-    "unicode": "1F9DB 200D 2640 FE0F",
-    "emoji": "🧛‍♀️",
-    "name": "woman vampire"
-  },
-  {
-    "unicode": "1F9DB 200D 2640",
-    "emoji": "🧛‍♀",
-    "name": "woman vampire"
-  },
-  {
-    "unicode": "1F9DB 200D 2642 FE0F",
-    "emoji": "🧛‍♂️",
-    "name": "man vampire"
-  },
-  {
-    "unicode": "1F9DB 200D 2642",
-    "emoji": "🧛‍♂",
-    "name": "man vampire"
-  },
-  {
-    "unicode": "1F9DC",
-    "emoji": "🧜",
-    "name": "merperson"
-  },
-  {
-    "unicode": "1F9DC 200D 2640 FE0F",
-    "emoji": "🧜‍♀️",
-    "name": "mermaid"
-  },
-  {
-    "unicode": "1F9DC 200D 2640",
-    "emoji": "🧜‍♀",
-    "name": "mermaid"
-  },
-  {
-    "unicode": "1F9DC 200D 2642 FE0F",
-    "emoji": "🧜‍♂️",
-    "name": "merman"
-  },
-  {
-    "unicode": "1F9DC 200D 2642",
-    "emoji": "🧜‍♂",
-    "name": "merman"
-  },
-  {
-    "unicode": "1F9DD",
-    "emoji": "🧝",
-    "name": "elf"
-  },
-  {
-    "unicode": "1F9DD 200D 2640 FE0F",
-    "emoji": "🧝‍♀️",
-    "name": "woman elf"
-  },
-  {
-    "unicode": "1F9DD 200D 2640",
-    "emoji": "🧝‍♀",
-    "name": "woman elf"
-  },
-  {
-    "unicode": "1F9DD 200D 2642 FE0F",
-    "emoji": "🧝‍♂️",
-    "name": "man elf"
-  },
-  {
-    "unicode": "1F9DD 200D 2642",
-    "emoji": "🧝‍♂",
-    "name": "man elf"
-  },
-  {
-    "unicode": "1F9DE",
-    "emoji": "🧞",
-    "name": "genie"
-  },
-  {
-    "unicode": "1F9DE 200D 2640 FE0F",
-    "emoji": "🧞‍♀️",
-    "name": "woman genie"
-  },
-  {
-    "unicode": "1F9DE 200D 2640",
-    "emoji": "🧞‍♀",
-    "name": "woman genie"
-  },
-  {
-    "unicode": "1F9DE 200D 2642 FE0F",
-    "emoji": "🧞‍♂️",
-    "name": "man genie"
-  },
-  {
-    "unicode": "1F9DE 200D 2642",
-    "emoji": "🧞‍♂",
-    "name": "man genie"
-  },
-  {
-    "unicode": "1F9DF",
-    "emoji": "🧟",
-    "name": "zombie"
-  },
-  {
-    "unicode": "1F9DF 200D 2640 FE0F",
-    "emoji": "🧟‍♀️",
-    "name": "woman zombie"
-  },
-  {
-    "unicode": "1F9DF 200D 2640",
-    "emoji": "🧟‍♀",
-    "name": "woman zombie"
-  },
-  {
-    "unicode": "1F9DF 200D 2642 FE0F",
-    "emoji": "🧟‍♂️",
-    "name": "man zombie"
-  },
-  {
-    "unicode": "1F9DF 200D 2642",
-    "emoji": "🧟‍♂",
-    "name": "man zombie"
   },
   {
     "unicode": "1F64D",
@@ -1553,81 +1308,6 @@
     "unicode": "1F46F 200D 2640",
     "emoji": "👯‍♀",
     "name": "women with bunny ears"
-  },
-  {
-    "unicode": "1F9D6",
-    "emoji": "🧖",
-    "name": "person in steamy room"
-  },
-  {
-    "unicode": "1F9D6 200D 2640 FE0F",
-    "emoji": "🧖‍♀️",
-    "name": "woman in steamy room"
-  },
-  {
-    "unicode": "1F9D6 200D 2640",
-    "emoji": "🧖‍♀",
-    "name": "woman in steamy room"
-  },
-  {
-    "unicode": "1F9D6 200D 2642 FE0F",
-    "emoji": "🧖‍♂️",
-    "name": "man in steamy room"
-  },
-  {
-    "unicode": "1F9D6 200D 2642",
-    "emoji": "🧖‍♂",
-    "name": "man in steamy room"
-  },
-  {
-    "unicode": "1F9D7",
-    "emoji": "🧗",
-    "name": "person climbing"
-  },
-  {
-    "unicode": "1F9D7 200D 2640 FE0F",
-    "emoji": "🧗‍♀️",
-    "name": "woman climbing"
-  },
-  {
-    "unicode": "1F9D7 200D 2640",
-    "emoji": "🧗‍♀",
-    "name": "woman climbing"
-  },
-  {
-    "unicode": "1F9D7 200D 2642 FE0F",
-    "emoji": "🧗‍♂️",
-    "name": "man climbing"
-  },
-  {
-    "unicode": "1F9D7 200D 2642",
-    "emoji": "🧗‍♂",
-    "name": "man climbing"
-  },
-  {
-    "unicode": "1F9D8",
-    "emoji": "🧘",
-    "name": "person in lotus position"
-  },
-  {
-    "unicode": "1F9D8 200D 2640 FE0F",
-    "emoji": "🧘‍♀️",
-    "name": "woman in lotus position"
-  },
-  {
-    "unicode": "1F9D8 200D 2640",
-    "emoji": "🧘‍♀",
-    "name": "woman in lotus position"
-  },
-  {
-    "unicode": "1F9D8 200D 2642 FE0F",
-    "emoji": "🧘‍♂️",
-    "name": "man in lotus position"
-  },
-  {
-    "unicode": "1F9D8 200D 2642",
-    "emoji": "🧘‍♂",
-    "name": "man in lotus position"
   },
   {
     "unicode": "1F6C0",
@@ -2465,11 +2145,6 @@
     "name": "waving hand"
   },
   {
-    "unicode": "1F91F",
-    "emoji": "🤟",
-    "name": "love-you gesture"
-  },
-  {
     "unicode": "270D FE0F",
     "emoji": "✍️",
     "name": "writing hand"
@@ -2493,11 +2168,6 @@
     "unicode": "1F64C",
     "emoji": "🙌",
     "name": "raising hands"
-  },
-  {
-    "unicode": "1F932",
-    "emoji": "🤲",
-    "name": "palms up together"
   },
   {
     "unicode": "1F64F",
@@ -2563,11 +2233,6 @@
     "unicode": "1F441 200D 1F5E8",
     "emoji": "👁‍🗨",
     "name": "eye in speech bubble"
-  },
-  {
-    "unicode": "1F9E0",
-    "emoji": "🧠",
-    "name": "brain"
   },
   {
     "unicode": "1F445",
@@ -2638,11 +2303,6 @@
     "unicode": "1F49B",
     "emoji": "💛",
     "name": "yellow heart"
-  },
-  {
-    "unicode": "1F9E1",
-    "emoji": "🧡",
-    "name": "orange heart"
   },
   {
     "unicode": "1F49C",
@@ -2790,26 +2450,6 @@
     "name": "jeans"
   },
   {
-    "unicode": "1F9E3",
-    "emoji": "🧣",
-    "name": "scarf"
-  },
-  {
-    "unicode": "1F9E4",
-    "emoji": "🧤",
-    "name": "gloves"
-  },
-  {
-    "unicode": "1F9E5",
-    "emoji": "🧥",
-    "name": "coat"
-  },
-  {
-    "unicode": "1F9E6",
-    "emoji": "🧦",
-    "name": "socks"
-  },
-  {
     "unicode": "1F457",
     "emoji": "👗",
     "name": "dress"
@@ -2903,11 +2543,6 @@
     "unicode": "1F393",
     "emoji": "🎓",
     "name": "graduation cap"
-  },
-  {
-    "unicode": "1F9E2",
-    "emoji": "🧢",
-    "name": "billed cap"
   },
   {
     "unicode": "26D1 FE0F",
@@ -3025,11 +2660,6 @@
     "name": "unicorn face"
   },
   {
-    "unicode": "1F993",
-    "emoji": "🦓",
-    "name": "zebra"
-  },
-  {
     "unicode": "1F98C",
     "emoji": "🦌",
     "name": "deer"
@@ -3100,11 +2730,6 @@
     "name": "two-hump camel"
   },
   {
-    "unicode": "1F992",
-    "emoji": "🦒",
-    "name": "giraffe"
-  },
-  {
     "unicode": "1F418",
     "emoji": "🐘",
     "name": "elephant"
@@ -3153,11 +2778,6 @@
     "unicode": "1F43F",
     "emoji": "🐿",
     "name": "chipmunk"
-  },
-  {
-    "unicode": "1F994",
-    "emoji": "🦔",
-    "name": "hedgehog"
   },
   {
     "unicode": "1F987",
@@ -3285,16 +2905,6 @@
     "name": "dragon"
   },
   {
-    "unicode": "1F995",
-    "emoji": "🦕",
-    "name": "sauropod"
-  },
-  {
-    "unicode": "1F996",
-    "emoji": "🦖",
-    "name": "T-Rex"
-  },
-  {
     "unicode": "1F433",
     "emoji": "🐳",
     "name": "spouting whale"
@@ -3383,11 +2993,6 @@
     "unicode": "1F41E",
     "emoji": "🐞",
     "name": "lady beetle"
-  },
-  {
-    "unicode": "1F997",
-    "emoji": "🦗",
-    "name": "cricket"
   },
   {
     "unicode": "1F577 FE0F",
@@ -3610,11 +3215,6 @@
     "name": "tomato"
   },
   {
-    "unicode": "1F965",
-    "emoji": "🥥",
-    "name": "coconut"
-  },
-  {
     "unicode": "1F951",
     "emoji": "🥑",
     "name": "avocado"
@@ -3655,11 +3255,6 @@
     "name": "cucumber"
   },
   {
-    "unicode": "1F966",
-    "emoji": "🥦",
-    "name": "broccoli"
-  },
-  {
     "unicode": "1F344",
     "emoji": "🍄",
     "name": "mushroom"
@@ -3690,11 +3285,6 @@
     "name": "baguette bread"
   },
   {
-    "unicode": "1F968",
-    "emoji": "🥨",
-    "name": "pretzel"
-  },
-  {
     "unicode": "1F95E",
     "emoji": "🥞",
     "name": "pancakes"
@@ -3713,11 +3303,6 @@
     "unicode": "1F357",
     "emoji": "🍗",
     "name": "poultry leg"
-  },
-  {
-    "unicode": "1F969",
-    "emoji": "🥩",
-    "name": "cut of meat"
   },
   {
     "unicode": "1F953",
@@ -3743,11 +3328,6 @@
     "unicode": "1F32D",
     "emoji": "🌭",
     "name": "hot dog"
-  },
-  {
-    "unicode": "1F96A",
-    "emoji": "🥪",
-    "name": "sandwich"
   },
   {
     "unicode": "1F32E",
@@ -3785,11 +3365,6 @@
     "name": "pot of food"
   },
   {
-    "unicode": "1F963",
-    "emoji": "🥣",
-    "name": "bowl with spoon"
-  },
-  {
     "unicode": "1F957",
     "emoji": "🥗",
     "name": "green salad"
@@ -3798,11 +3373,6 @@
     "unicode": "1F37F",
     "emoji": "🍿",
     "name": "popcorn"
-  },
-  {
-    "unicode": "1F96B",
-    "emoji": "🥫",
-    "name": "canned food"
   },
   {
     "unicode": "1F371",
@@ -3870,21 +3440,6 @@
     "name": "dango"
   },
   {
-    "unicode": "1F95F",
-    "emoji": "🥟",
-    "name": "dumpling"
-  },
-  {
-    "unicode": "1F960",
-    "emoji": "🥠",
-    "name": "fortune cookie"
-  },
-  {
-    "unicode": "1F961",
-    "emoji": "🥡",
-    "name": "takeout box"
-  },
-  {
     "unicode": "1F366",
     "emoji": "🍦",
     "name": "soft ice cream"
@@ -3918,11 +3473,6 @@
     "unicode": "1F370",
     "emoji": "🍰",
     "name": "shortcake"
-  },
-  {
-    "unicode": "1F967",
-    "emoji": "🥧",
-    "name": "pie"
   },
   {
     "unicode": "1F36B",
@@ -4013,16 +3563,6 @@
     "unicode": "1F943",
     "emoji": "🥃",
     "name": "tumbler glass"
-  },
-  {
-    "unicode": "1F964",
-    "emoji": "🥤",
-    "name": "cup with straw"
-  },
-  {
-    "unicode": "1F962",
-    "emoji": "🥢",
-    "name": "chopsticks"
   },
   {
     "unicode": "1F37D FE0F",
@@ -6362,11 +5902,6 @@
   {
     "unicode": "1F5D2 FE0F",
     "emoji": "🗒️",
-    "name": "spiral notepad"
-  },
-  {
-    "unicode": "1F5D2",
-    "emoji": "🗒",
     "name": "spiral notepad"
   },
   {

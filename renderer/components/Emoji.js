@@ -1,6 +1,7 @@
 import React from "react";
 const electron = require("electron");
 const { clipboard } = electron;
+import debounce from "lodash/debounce";
 
 const Emoji = ({ name, emoji }) => {
   const copyEmojiToClipBoard = e => {
@@ -13,7 +14,10 @@ const Emoji = ({ name, emoji }) => {
     <div className="emoji">
       <abbr title={name}>
         <button
-          onClick={copyEmojiToClipBoard}
+          onClick={debounce(copyEmojiToClipBoard, 50, {
+            leading: false,
+            trailing: true
+          })}
           className="emoji-button"
           role="button"
         >

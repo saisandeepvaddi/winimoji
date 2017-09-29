@@ -10,7 +10,7 @@ module.exports = {
     chunkFilename: "[name].bundle.js",
     path: path.resolve(__dirname, "renderer")
   },
-  devtool: "eval-source-map",
+  // devtool: "eval-source-map",
   module: {
     rules: [
       {
@@ -41,7 +41,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       "process.env": {
-        NODE_ENV: JSON.stringify("development")
+        NODE_ENV: JSON.stringify("production")
       }
     }),
     new UglifyJSPlugin({
@@ -50,6 +50,5 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "renderer", "for_webpack", "index.html")
     })
-  ],
-  watch: true
+  ]
 };
