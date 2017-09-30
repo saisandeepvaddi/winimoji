@@ -1,24 +1,19 @@
 import React from "react";
 const electron = require("electron");
 const { clipboard } = electron;
-import debounce from "lodash/debounce";
+import throttle from "lodash/throttle";
 
 const Emoji = ({ name, emoji }) => {
   const copyEmojiToClipBoard = e => {
     clipboard.clear();
-    clipboard.write({
-      text: emoji
-    });
+    clipboard.writeText(emoji, "utf-8");
   };
 
   return (
     <div className="emoji">
       <abbr title={name}>
         <button
-          onClick={debounce(copyEmojiToClipBoard, 50, {
-            leading: false,
-            trailing: true
-          })}
+          onClick={throttle(copyEmojiToClipBoard, 100)}
           className="emoji-button"
           role="button"
         >
