@@ -13,7 +13,7 @@ const Emoji = ({ name, emoji }) => {
     <div className="emoji">
       <abbr title={name}>
         <button
-          onClick={throttle(copyEmojiToClipBoard, 100)}
+          onClick={copyEmojiToClipBoard}
           className="emoji-button"
           role="button"
         >

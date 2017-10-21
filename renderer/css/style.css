@@ -72,6 +72,10 @@ body {
   width: 50px;
 }
 
+.emoji-button {
+  -webkit-user-select: text;
+}
+
 /* Lay Out End */
 
 /* Styling Elements Start */
