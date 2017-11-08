@@ -13,11 +13,6 @@ Download from [here](https://winimoji.download/)
 </p>
 
 
-## Roadmap
-
-- Favorites
-- Drag and Drop
-
 ## License
 
-[MIT](/LICENSE) 
+[MIT](/LICENSE)
